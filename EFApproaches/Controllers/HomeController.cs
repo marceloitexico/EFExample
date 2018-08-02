@@ -10,8 +10,13 @@ namespace EFApproaches.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Home Page from another PC";
+            return View();
+        }
 
+        public ActionResult About()
+        {
+            ViewBag.Title = "About Page from another PC";
             return View();
         }
     }
