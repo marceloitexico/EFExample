@@ -16,8 +16,8 @@ namespace EFApproaches.DAL.Implementations
         {
             var students = new List<Student>
             {
-            new Student{FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01")},
-            new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="Carson",LastName="Alexander",  EnrollmentDate=DateTime.Parse("2005-09-01"),TheEmailAddress="carson@school.com"},
+            new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01"),TheEmailAddress="meredith@school.com"},
             new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
             new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01")},
             new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},

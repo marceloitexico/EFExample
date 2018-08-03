@@ -184,3 +184,4 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CopyComplete
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache

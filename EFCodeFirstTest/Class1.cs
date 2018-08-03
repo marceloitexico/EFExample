@@ -8,5 +8,6 @@ namespace EFCodeFirstTest
 {
     public class Class1
     {
+
     }
 }

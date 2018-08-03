@@ -27,13 +27,43 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.TheEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TheEmailAddress)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.EnrollmentDate)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EnrollmentDate)
         </dd>
-
+        <!--Enrollments information *lastedit-->
+        <dt>
+            @Html.DisplayNameFor(model => model.Enrollments)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                </tr>
+                @foreach (var item in Model.Enrollments)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Course.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Grade)
+                        </td>
+                    </tr>
+                }k
+            </table>
+        </dd>
     </dl>
 </div>
 <p>
