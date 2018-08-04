@@ -50,15 +50,23 @@ namespace EFApproaches.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Student student)
+        public ActionResult Create([Bind(Include = "LastName,FirstMidName,EnrollmentDate")] Student student)
         {
-            if (ModelState.IsValid)
+            try
             {
-                unitOfWork.StudentRepo.Create(student);
-                unitOfWork.Commit(); 
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    unitOfWork.StudentRepo.Create(student);
+                    unitOfWork.Commit();
+                    return RedirectToAction("Index");
+                }
             }
-
+            catch (DataException dataEx)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("","Unable to save changes. Try again, and if the problem persists see your system administrator, error: " + dataEx.Message);
+            }
+           //If model is not valid
             return View(student);
         }
 
