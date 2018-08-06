@@ -145,7 +145,7 @@ namespace EFApproaches.Controllers
                 unitOfWork.StudentRepo.Delete(student);
                 unitOfWork.Commit();
             }
-            catch (DataException/* dex */)
+            catch (Exception/* dex */)
             {
                 //Log the error (uncomment dex variable name and add a line here to write a log.
                 return RedirectToAction("Delete", new { id = id, saveChangesError = true });
