@@ -43,8 +43,16 @@ namespace EFApproaches.DAL.Implementations
 
         public void Delete(T entity)
         {
+            try
+            {
+                dbSet.Remove(entity);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             //remove method receives an entity object, not an id
-            dbSet.Remove(entity);
+           
         }
         
         //IDisposable implementation
