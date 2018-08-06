@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirst", "EFApproaches\EFCodeFirst.csproj", "{E0D4192F-82B9-4477-B4A8-C68171A28810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirstTest", "EFCodeFirstTest\EFCodeFirstTest.csproj", "{AD279F7C-E031-46DE-A660-A980F57F70DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirst.UnitTest", "EFCodeFirstTest\EFCodeFirst.UnitTest.csproj", "{AD279F7C-E031-46DE-A660-A980F57F70DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

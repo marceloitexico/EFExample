@@ -1,0 +1,10 @@
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\nunit.framework.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\nunit.framework.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\nunit.framework.xml
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.csprojAssemblyReference.cache
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.csproj.CoreCompileInputs.cache
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.csproj.CopyComplete
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.pdb

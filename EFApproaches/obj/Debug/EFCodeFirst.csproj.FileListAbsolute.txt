@@ -121,6 +121,8 @@ C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\bin\es\System.Web.WebPa
 C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CoreCompileInputs.cache
 C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.dll
 C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.pdb
+C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
+C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CopyComplete
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\ApplicationInsights.config
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\EFCodeFirst.dll.config
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\EFCodeFirst.dll
@@ -184,5 +186,3 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.pdb
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
-C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
-C:\Users\marcelo\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CopyComplete

@@ -13,5 +13,10 @@ namespace EFApproaches.DAL.Entities
         public DateTime EnrollmentDate { get; set; }
         public string EmailAddress { get; set; }
         public virtual ICollection<Enrollment> Enrollments { get; set; }
+
+        public void GenerateEmailFromName(string domain)
+        {
+            this.EmailAddress = this.LastName + "@" + domain;
+        }
     }
 }

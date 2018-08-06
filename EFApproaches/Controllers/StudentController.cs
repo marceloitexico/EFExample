@@ -8,19 +8,21 @@ using System.Web;
 using System.Web.Mvc;
 using EFApproaches.DAL.Implementations;
 using EFApproaches.DAL.Entities;
+using System.Configuration;
 
 namespace EFApproaches.Controllers
 {
     public class StudentController : Controller
     {
-        
         private UnitOfWork unitOfWork = new UnitOfWork();
-      
+        private string schoolDomain = ConfigurationManager.AppSettings["SchoolDomain"];
+        
         // GET: Students
         public ActionResult Index()
         {
             return View(unitOfWork.StudentRepo.DataSet); 
         }
+        #region CRUD Actions
 
         // GET: Students/Details/5
         public ActionResult Details(int? id)
@@ -56,6 +58,9 @@ namespace EFApproaches.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    //fill the email of the student
+                    student.GenerateEmailFromName(schoolDomain);
+
                     unitOfWork.StudentRepo.Create(student);
                     unitOfWork.Commit();
                     return RedirectToAction("Index");
@@ -70,6 +75,7 @@ namespace EFApproaches.Controllers
             return View(student);
         }
 
+       
         // GET: Students/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -152,7 +158,12 @@ namespace EFApproaches.Controllers
             }
             return RedirectToAction("Index");
         }
+        #endregion CRUD Actions
+        #region other Actions
+        
 
+
+        #endregion
         protected override void Dispose(bool disposing)
         {
             unitOfWork.Dispose();
