@@ -24,7 +24,11 @@ namespace EFApproaches.DAL.Implementations
         }
 
         //Implementation of IRepository methods
-        public virtual  IEnumerable<T> DataSet { get { return dbSet; } }
+        public virtual  IEnumerable<T> DataSet {
+            get {
+                return dbSet;
+            }
+        }
 
         public virtual void Create(T entity)
         {

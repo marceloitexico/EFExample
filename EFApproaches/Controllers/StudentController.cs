@@ -12,15 +12,22 @@ using System.Configuration;
 
 namespace EFApproaches.Controllers
 {
-    public class StudentController : Controller
+    public class StudentController : BaseController
     {
-        private UnitOfWork unitOfWork = new UnitOfWork();
+        #region private members
+       
         private string schoolDomain = ConfigurationManager.AppSettings["SchoolDomain"];
-        
+        #endregion private members
+        #region constructor
+        public StudentController(){}
+        public StudentController(SchoolContext schoolContext) 
+        : base(schoolContext){}
+        #endregion constructor
+
         // GET: Students
         public ActionResult Index()
         {
-            return View(unitOfWork.StudentRepo.DataSet); 
+            return View(unitOfWork.StudentRepo.DataSet);
         }
         #region CRUD Actions
 

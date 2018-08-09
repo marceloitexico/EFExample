@@ -10,13 +10,22 @@ namespace EFApproaches.DAL.Implementations
     public class UnitOfWork : IDisposable
     {
         //Our only database context 
-        private SchoolContext dbContext = new SchoolContext();
+        private static SchoolContext dbContext;
 
         //Private members corresponding to each concrete repository
         private Repository<Student> studentRepo;
         private Repository<Enrollment> enrollmentRepo;
         private Repository<Course> courseRepo;
 
+        public UnitOfWork()
+        {
+            dbContext = new SchoolContext();
+        }
+
+        public UnitOfWork(SchoolContext ctx)
+        {
+            dbContext = ctx;
+        }
         //Accessor for private student repository, creates repository if null
         public IRepository<Student> StudentRepo
         {
@@ -24,7 +33,7 @@ namespace EFApproaches.DAL.Implementations
             {
                 if (studentRepo == null)
                 {
-                    studentRepo = new Repository<Student>(this.dbContext);
+                    studentRepo = new Repository<Student>(dbContext);
                 }
                 return studentRepo;
             }
@@ -37,7 +46,7 @@ namespace EFApproaches.DAL.Implementations
             {
                 if (enrollmentRepo == null)
                 {
-                    enrollmentRepo = new Repository<Enrollment>(this.dbContext);
+                    enrollmentRepo = new Repository<Enrollment>(dbContext);
                 }
                 return enrollmentRepo;
             }
@@ -50,7 +59,7 @@ namespace EFApproaches.DAL.Implementations
             {
                 if (courseRepo == null)
                 {
-                    courseRepo = new Repository<Course>(this.dbContext);
+                    courseRepo = new Repository<Course>(dbContext);
                 }
                 return courseRepo;
             }
