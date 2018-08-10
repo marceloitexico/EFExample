@@ -7,15 +7,13 @@ using System.Web;
 
 namespace EFApproaches.DAL.Implementations
 {
-    public class UnitOfWork : IDisposable
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        //Our only database context 
-        private static SchoolContext dbContext;
-
         //Private members corresponding to each concrete repository
         private Repository<Student> studentRepo;
         private Repository<Enrollment> enrollmentRepo;
         private Repository<Course> courseRepo;
+        private bool disposed = false;
 
         public UnitOfWork()
         {
@@ -71,10 +69,7 @@ namespace EFApproaches.DAL.Implementations
             dbContext.SaveChanges();
         }
 
-        //IDisposible implementation
-        private bool disposed = false;
-
-        protected virtual void Dispose(bool disposing)
+        protected void Dispose(bool disposing)
         {
             if (!this.disposed)
             {
@@ -90,5 +85,6 @@ namespace EFApproaches.DAL.Implementations
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
     }
 }
