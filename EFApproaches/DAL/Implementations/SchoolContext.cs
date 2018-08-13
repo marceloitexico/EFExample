@@ -1,4 +1,5 @@
 ﻿using EFApproaches.DAL.Entities;
+using EFApproaches.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Web;
 
 namespace EFApproaches.DAL.Implementations
 {
-    public class SchoolContext : DbContext
+    public class SchoolContext : DbContext, IContext
     {
         public SchoolContext() : base("SchoolContext")//Connection string's name
         { }
@@ -18,7 +19,8 @@ namespace EFApproaches.DAL.Implementations
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();//If you didn't do this, the generated tables in the database would be named Students, Courses, and Enrollments
+            //If you didn't do this, the generated tables in the database would be named Students, Courses, and Enrollments
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
         }
     }

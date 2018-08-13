@@ -55,15 +55,15 @@ namespace EFCodeFirstTest.ControllersTests
         /// //create fake context with data in memory
         /// </summary>
         /// <returns></returns>
-        private Mock<SchoolContext> generateFakeContextWithData()
+        private Mock<IContext> generateFakeContextWithData()
         {
             var data = generateStudentsList();
             //create a mock for DbSet of students
             var set = new Mock<DbSet<Student>>()
                 .SetupData(data);
 
-            var context = new Mock<SchoolContext>();
-            context.Setup(sc => sc.Set<Student>()).Returns(set.Object); 
+            var context = new Mock<IContext>();
+            //context.Setup(sc => sc.Set<Student>()).Returns(set.Object); 
             context.SetupGet(c => c.Students).Returns(set.Object);
             return context;
         }
@@ -74,7 +74,8 @@ namespace EFCodeFirstTest.ControllersTests
         public void ShouldRenderIndexView()
         {
             var context = generateFakeContextWithData();
-            var sut = new StudentController(context.Object);
+            //*--> change it to call contructor with Unit of work as parameter
+            var sut = new StudentController((SchoolContext)context.Object);
             // Check the type of the model
             sut.WithCallTo(x => x.Index()).ShouldRenderDefaultView().WithModel<DbSet<Student>>();
         }
@@ -100,11 +101,16 @@ namespace EFCodeFirstTest.ControllersTests
         [TestCase(4)]
         public void DetailsShouldReturnStudentForValidID(int studentID)
         {
-            var context = generateFakeContextWithData();
-            var sut = new StudentController(context.Object);
+            var fakeContext = generateFakeContextWithData();
+            //Create a new MOck of repository passing it the fake context.
+            var fakeRepo = new Mock<IRepository<Student>>(fakeContext);
+            //create faje Unit of Work
+            var fakeUnitOfWork = new Mock<IUnitOfWork>();
+            //configure unit of work to 
+            fakeUnitOfWork.Setup(u => u.StudentRepo).Returns(fakeRepo.Object);
+            var sut = new StudentController(fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Details(1)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
         }
-
         #endregion Details_ID
     }
 }

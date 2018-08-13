@@ -1,4 +1,5 @@
-﻿using EFApproaches.DAL.Implementations;
+﻿using EFApproaches.DAL.Entities;
+using EFApproaches.DAL.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,11 @@ using System.Web;
 
 namespace EFApproaches.DAL.Interfaces
 {
-    public class IUnitOfWork
+    public interface IUnitOfWork
     {
-        protected static SchoolContext dbContext;
+        SchoolContext DbContext { get; set; }
+        IRepository<Student> StudentRepo { get; set; }
+        void Commit();
+        void Dispose();
     }
 }

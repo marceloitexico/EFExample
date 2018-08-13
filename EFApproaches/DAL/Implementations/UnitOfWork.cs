@@ -10,19 +10,19 @@ namespace EFApproaches.DAL.Implementations
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
         //Private members corresponding to each concrete repository
-        private Repository<Student> studentRepo;
+        public  Repository<Student> studentRepo;
         private Repository<Enrollment> enrollmentRepo;
         private Repository<Course> courseRepo;
         private bool disposed = false;
-
+        public SchoolContext DbContext { get; set; }
         public UnitOfWork()
         {
-            dbContext = new SchoolContext();
+            DbContext = new SchoolContext();
         }
 
         public UnitOfWork(SchoolContext ctx)
         {
-            dbContext = ctx;
+            DbContext = ctx;
         }
         //Accessor for private student repository, creates repository if null
         public IRepository<Student> StudentRepo
@@ -31,10 +31,11 @@ namespace EFApproaches.DAL.Implementations
             {
                 if (studentRepo == null)
                 {
-                    studentRepo = new Repository<Student>(dbContext);
+                    studentRepo = new Repository<Student>(DbContext);
                 }
                 return studentRepo;
             }
+            set { }
         }
 
         //Accessor for private enrollment repository, creates repository if null
@@ -44,7 +45,7 @@ namespace EFApproaches.DAL.Implementations
             {
                 if (enrollmentRepo == null)
                 {
-                    enrollmentRepo = new Repository<Enrollment>(dbContext);
+                    enrollmentRepo = new Repository<Enrollment>(DbContext);
                 }
                 return enrollmentRepo;
             }
@@ -57,7 +58,7 @@ namespace EFApproaches.DAL.Implementations
             {
                 if (courseRepo == null)
                 {
-                    courseRepo = new Repository<Course>(dbContext);
+                    courseRepo = new Repository<Course>(DbContext);
                 }
                 return courseRepo;
             }
@@ -66,16 +67,16 @@ namespace EFApproaches.DAL.Implementations
         //Method to save all changes to repositories (Save the whole transaction)
         public void Commit()
         {
-            dbContext.SaveChanges();
+            DbContext.SaveChanges();
         }
 
-        protected void Dispose(bool disposing)
+        public void Dispose(bool disposing)
         {
             if (!this.disposed)
             {
                 if (disposing)
                 {
-                    dbContext.Dispose();
+                    DbContext.Dispose();
                 }
             }
         }

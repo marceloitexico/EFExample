@@ -191,6 +191,7 @@
     <Compile Include="DAL\Implementations\SchoolInitializer.cs" />
     <Compile Include="DAL\Implementations\Repository.cs" />
     <Compile Include="DAL\Implementations\UnitOfWork.cs" />
+    <Compile Include="DAL\Interfaces\IContext.cs" />
     <Compile Include="DAL\Interfaces\IRepository.cs" />
     <Compile Include="DAL\Interfaces\IUnitOfWork.cs" />
     <Compile Include="Global.asax.cs">

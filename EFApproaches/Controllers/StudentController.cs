@@ -9,17 +9,19 @@ using System.Web.Mvc;
 using EFApproaches.DAL.Implementations;
 using EFApproaches.DAL.Entities;
 using System.Configuration;
+using EFApproaches.DAL.Interfaces;
 
 namespace EFApproaches.Controllers
 {
     public class StudentController : BaseController
     {
         #region private members
-       
+
         private string schoolDomain = ConfigurationManager.AppSettings["SchoolDomain"];
         #endregion private members
         #region constructor
-        public StudentController(){}
+        public StudentController() { }
+        public StudentController(IUnitOfWork unitOfWork) : base(unitOfWork){}
         public StudentController(SchoolContext schoolContext) 
         : base(schoolContext){}
         #endregion constructor
@@ -38,7 +40,6 @@ namespace EFApproaches.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
             Student student = unitOfWork.StudentRepo.GetById(id); 
 
             if (student == null)

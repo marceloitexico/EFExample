@@ -1,5 +1,3 @@
-C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.Razor.xml
-C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Web.Http.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\ApplicationInsights.config
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll.config
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll
@@ -42,6 +40,7 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.T
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.ValueTuple.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.Helpers.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.Mvc.xml
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.Razor.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.WebPages.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.WebPages.Razor.xml
@@ -51,6 +50,7 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.N
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Web.Http.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Net.Http.Formatting.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Web.Http.WebHost.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csprojAssemblyReference.cache

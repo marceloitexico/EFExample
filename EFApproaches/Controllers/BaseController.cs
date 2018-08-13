@@ -1,4 +1,5 @@
 ﻿using EFApproaches.DAL.Implementations;
+using EFApproaches.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,7 +11,9 @@ namespace EFApproaches.Controllers
 {
     public class BaseController : Controller
     {
-        protected static UnitOfWork unitOfWork;
+        protected static IUnitOfWork unitOfWork;
+        //private IUnitOfWork unitOfWork1;
+
         public BaseController()
         {
             unitOfWork = new UnitOfWork();
@@ -18,6 +21,11 @@ namespace EFApproaches.Controllers
         public BaseController(SchoolContext ctx)
         {
             unitOfWork = new UnitOfWork(ctx);
+        }
+
+        public BaseController(IUnitOfWork unitofwork)
+        {
+            unitOfWork = unitofwork;
         }
     }
 }
