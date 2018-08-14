@@ -12,17 +12,29 @@ using TestStack.FluentMVCTesting;
 using EntityFramework.Testing;
 using System.Data.Entity;
 using EFApproaches.DAL.Interfaces;
+using System.Net;
 
 namespace EFCodeFirstTest.ControllersTests
 {
     [TestFixture]
     public class StudentControllerTest
     {
+        private Mock<IContext> _fakeContext = null;
+        private Mock<IRepository<Student>> _fakeRepo = null;
+        private Mock<IUnitOfWork> _fakeUnitOfWork = null;
         #region Setup And TearDown
         [OneTimeSetUp]
         public void InitilizeOncePerRun()
         {
-            Console.WriteLine("Initial message");
+            //Console.WriteLine("Initial message");
+            _fakeContext = generateFakeContextWithData();
+            //Create a new Mock of repository
+            _fakeRepo = new Mock<IRepository<Student>>();
+            _fakeRepo.SetupGet<IEnumerable<Student>>(r => r.DataSet).Returns(_fakeContext.Object.Students);
+            //create fake Unit of Work
+            _fakeUnitOfWork = new Mock<IUnitOfWork>();
+            //configure unit of work to 
+            _fakeUnitOfWork.SetupGet<IRepository<Student>>(u => u.StudentRepo).Returns(_fakeRepo.Object);
         }
         [OneTimeTearDown]
         public void CleanupOncePerRun()
@@ -61,23 +73,37 @@ namespace EFCodeFirstTest.ControllersTests
             //create a mock for DbSet of students
             var set = new Mock<DbSet<Student>>()
                 .SetupData(data);
-
             var context = new Mock<IContext>();
             //context.Setup(sc => sc.Set<Student>()).Returns(set.Object); 
             context.SetupGet(c => c.Students).Returns(set.Object);
             return context;
         }
+
+        private void configureRepository(int studentID)
+        {
+            try
+            {
+                _fakeRepo.Setup(r => r.GetById(studentID)).Returns(_fakeContext.Object.Students.FirstOrDefault<Student>(s => s.ID == studentID));
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            
+        }
         #endregion  privateHelpMethods
 
         #region Index
         [Test]
-        public void ShouldRenderIndexView()
+        public void ShouldRenderIndexViewWithModel()
         {
             var context = generateFakeContextWithData();
             //*--> change it to call contructor with Unit of work as parameter
-            var sut = new StudentController((SchoolContext)context.Object);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
             // Check the type of the model
-            sut.WithCallTo(x => x.Index()).ShouldRenderDefaultView().WithModel<DbSet<Student>>();
+            var ds = _fakeUnitOfWork.Object.StudentRepo.DataSet;
+            sut.WithCallTo(x => x.Index()).ShouldRenderDefaultView().WithModel<IEnumerable<Student>>(ds);
+            
         }
         #endregion Index
         #region Details_ID
@@ -88,10 +114,12 @@ namespace EFCodeFirstTest.ControllersTests
             sut.WithCallTo(x => x.Details(null)).ShouldGiveHttpStatus(System.Net.HttpStatusCode.BadRequest);
         }
 
-        [Test]
-        public void DetailsShouldReturnNotFoundResultForInexistentID()
+        [TestCase(-1)]
+        [TestCase(-2)]
+        public void DetailsShouldReturnNotFoundResultForInexistentID(int studentID)
         {
-            var sut = new StudentController();
+            configureRepository(studentID);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Details(-1)).ShouldGiveHttpStatus(System.Net.HttpStatusCode.NotFound);
         }
 
@@ -101,16 +129,80 @@ namespace EFCodeFirstTest.ControllersTests
         [TestCase(4)]
         public void DetailsShouldReturnStudentForValidID(int studentID)
         {
-            var fakeContext = generateFakeContextWithData();
-            //Create a new MOck of repository passing it the fake context.
-            var fakeRepo = new Mock<IRepository<Student>>(fakeContext);
-            //create faje Unit of Work
-            var fakeUnitOfWork = new Mock<IUnitOfWork>();
-            //configure unit of work to 
-            fakeUnitOfWork.Setup(u => u.StudentRepo).Returns(fakeRepo.Object);
-            var sut = new StudentController(fakeUnitOfWork.Object);
-            sut.WithCallTo(x => x.Details(1)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
+            //set
+            configureRepository(studentID);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            //Action and Assert
+            sut.WithCallTo(x => x.Details(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
         }
         #endregion Details_ID
+
+        #region Create
+        [Test]
+        public void CreateShouldRenderDefaultView()
+        {
+            var sut = new StudentController();
+            sut.WithCallTo(x => x.Create()).ShouldRenderDefaultView();
+        }
+
+        /// <summary>
+        /// Validate Model
+        /// No model errors
+        /// return proper view
+        /// </summary>
+        [Test]
+        public void CreatePostShouldRenderDefaultView()
+        {
+            var mockStudent = new Mock<Student>();
+            mockStudent.Setup(s => s.GenerateEmailFromName(It.IsAny<string>())).Callback((string schoolDomain) => {});
+            _fakeRepo.Setup(r => r.Create(It.IsAny<Student>())).Callback((Student std) => {});
+            _fakeUnitOfWork.Setup(u => u.Commit()).Callback(() =>{});
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.Create(mockStudent.Object)).ShouldRedirectTo(x => x.Index);
+        }
+        [Test]
+        public void CreatePostGetInvalidModelError()
+        {
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            //Add error to ModelState
+            sut.ModelState.AddModelError("FirstMidNameRequiredError", "Model is not valid, verify required fields");
+            sut.WithCallTo(x => x.Create(new Student())).ShouldRenderDefaultView().WithModel<Student>().AndModelError("FirstMidNameRequiredError");
+        }
+
+        [Test]
+        public void CreatePostGetExceptionError()
+        {
+            //Add error to ModelState
+            _fakeUnitOfWork.SetupGet(u => u.StudentRepo).Throws(new Exception("ExceptionMsg"));
+            var std = new Student { ID = 23 };
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.Create(std)).ShouldRenderDefaultView().WithModel<Student>().AndModelError("ExecptionError");
+        }
+        #endregion Create
+
+        #region Edit
+        [Test]
+        public void EditGetShouldReturnBadRequestResponse()
+        {
+            var sut = new StudentController();
+            sut.WithCallTo(x => x.Edit(null)).ShouldGiveHttpStatus(HttpStatusCode.BadRequest);
+        }
+
+        [Test]
+        public void EditGetShouldReturnNotFoundResponse()
+        {
+            _fakeRepo.Setup(r => r.GetById(It.IsAny<int>())).Returns((Student)null);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.Edit(It.IsAny<int>())).ShouldGiveHttpStatus(HttpStatusCode.NotFound);
+        }
+
+        [Test]
+        public void EditGetShouldRenderDefaultView()
+        {
+            _fakeRepo.Setup(r => r.GetById(It.IsAny<int>())).Returns((Student)null);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+
+        }
+        #endregion Edit
     }
 }

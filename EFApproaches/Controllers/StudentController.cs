@@ -74,10 +74,10 @@ namespace EFApproaches.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch (DataException dataEx)
+            catch (Exception dataEx)
             {
                 //Log the error (uncomment dex variable name and add a line here to write a log.
-                ModelState.AddModelError("","Unable to save changes. Try again, and if the problem persists see your system administrator, error: " + dataEx.Message);
+                ModelState.AddModelError("ExecptionError","Unable to save changes. Try again, and if the problem persists see your system administrator, error: " + dataEx.Message);
             }
            //If model is not valid
             return View(student);
@@ -168,8 +168,6 @@ namespace EFApproaches.Controllers
         }
         #endregion CRUD Actions
         #region other Actions
-        
-
 
         #endregion
         protected override void Dispose(bool disposing)

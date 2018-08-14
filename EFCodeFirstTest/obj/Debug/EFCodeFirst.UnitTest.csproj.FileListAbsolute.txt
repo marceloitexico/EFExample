@@ -1,3 +1,5 @@
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csprojAssemblyReference.cache
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csproj.CoreCompileInputs.cache
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\ApplicationInsights.config
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll.config
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll
@@ -53,8 +55,6 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\Syste
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Web.Http.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Net.Http.Formatting.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\es\System.Web.Http.WebHost.resources.dll
-C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csprojAssemblyReference.cache
-C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csproj.CoreCompileInputs.cache
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csproj.CopyComplete
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.pdb
