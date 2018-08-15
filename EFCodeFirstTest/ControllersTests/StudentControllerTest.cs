@@ -13,15 +13,21 @@ using EntityFramework.Testing;
 using System.Data.Entity;
 using EFApproaches.DAL.Interfaces;
 using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace EFCodeFirstTest.ControllersTests
 {
     [TestFixture]
     public class StudentControllerTest
     {
+        #region private members
         private Mock<IContext> _fakeContext = null;
         private Mock<IRepository<Student>> _fakeRepo = null;
         private Mock<IUnitOfWork> _fakeUnitOfWork = null;
+        private static byte inexistentStudentID = 0;
+        #endregion private members
         #region Setup And TearDown
         [OneTimeSetUp]
         public void InitilizeOncePerRun()
@@ -42,7 +48,10 @@ namespace EFCodeFirstTest.ControllersTests
             Console.WriteLine("Final message");
         }
         [SetUp]
-        public void InitializeBeforeEachTest(){ }
+        public void InitializeBeforeEachTest()
+        {
+            TestContext.Out.WriteLine(TestContext.CurrentContext.Test.MethodName);
+        }
         [TearDown]
         public void CleanupAfterEachTestFuncto() { }
         #endregion Setup And TearDown
@@ -79,6 +88,10 @@ namespace EFCodeFirstTest.ControllersTests
             return context;
         }
 
+        /// <summary>
+        /// Configure Fake Repository to return an student given an ID
+        /// </summary>
+        /// <param name="studentID"></param>
         private void configureRepository(int studentID)
         {
             try
@@ -89,10 +102,23 @@ namespace EFCodeFirstTest.ControllersTests
             {
                 throw;
             }
-            
+        }
+
+        /// <summary>
+        /// Create and Configure ControllerContext to be used in TryUpdateModel
+        /// </summary>
+        /// <returns></returns>
+        private ControllerContext CreateControllerContextObject()
+        {
+            var request = new Mock<HttpRequestBase>();
+            request.Setup(r => r.HttpMethod).Returns("GET");
+            var mockHttpContext = new Mock<HttpContextBase>();
+            mockHttpContext.Setup(c => c.Request).Returns(request.Object);
+            var controllerContext = new ControllerContext(mockHttpContext.Object
+            , new RouteData(), new Mock<ControllerBase>().Object);
+            return controllerContext;
         }
         #endregion  privateHelpMethods
-
         #region Index
         [Test]
         public void ShouldRenderIndexViewWithModel()
@@ -106,7 +132,7 @@ namespace EFCodeFirstTest.ControllersTests
             
         }
         #endregion Index
-        #region Details_ID
+        #region Details
         [Test]
         public void DetailsShouldReturnBadRequestResultForNullID()
         {
@@ -136,7 +162,6 @@ namespace EFCodeFirstTest.ControllersTests
             sut.WithCallTo(x => x.Details(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
         }
         #endregion Details_ID
-
         #region Create
         [Test]
         public void CreateShouldRenderDefaultView()
@@ -151,7 +176,7 @@ namespace EFCodeFirstTest.ControllersTests
         /// return proper view
         /// </summary>
         [Test]
-        public void CreatePostShouldRenderDefaultView()
+        public void CreatePostShouldRedirectToIndex_Success()
         {
             var mockStudent = new Mock<Student>();
             mockStudent.Setup(s => s.GenerateEmailFromName(It.IsAny<string>())).Callback((string schoolDomain) => {});
@@ -179,7 +204,6 @@ namespace EFCodeFirstTest.ControllersTests
             sut.WithCallTo(x => x.Create(std)).ShouldRenderDefaultView().WithModel<Student>().AndModelError("ExecptionError");
         }
         #endregion Create
-
         #region Edit
         [Test]
         public void EditGetShouldReturnBadRequestResponse()
@@ -196,13 +220,124 @@ namespace EFCodeFirstTest.ControllersTests
             sut.WithCallTo(x => x.Edit(It.IsAny<int>())).ShouldGiveHttpStatus(HttpStatusCode.NotFound);
         }
 
-        [Test]
-        public void EditGetShouldRenderDefaultView()
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        public void EditGetShouldRenderDefaultView(int studentID)
         {
-            _fakeRepo.Setup(r => r.GetById(It.IsAny<int>())).Returns((Student)null);
+            configureRepository(studentID);
             var sut = new StudentController(_fakeUnitOfWork.Object);
-
+            sut.WithCallTo(x => x.Edit(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
         }
+
+        /// <summary>
+        /// Edit, Post
+        /// </summary>
+        [Test]
+        public void EditPostShouldReturnBadRequestResponse()
+        {
+            var sut = new StudentController();
+            sut.WithCallTo(x => x.EditPost(null)).ShouldGiveHttpStatus(HttpStatusCode.BadRequest);
+        }
+
+        [Test]
+        public void EditPostShouldReturnNullModelError()
+        {
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.ControllerContext = CreateControllerContextObject();
+            sut.ValueProvider = new FormCollection().ToValueProvider();
+            sut.WithCallTo(x => x.EditPost(0)).ShouldRenderDefaultView().WithModel<Student>().AndModelError("NullModelError");
+        }
+
+        [TestCase(1)]
+        public void EditPostShouldReturnSaveChangesExceptionError(int studentID)
+        {
+            configureRepository(studentID);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.EditPost(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndModelError("SaveChangesExceptionError");
+        }
+
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        public void EditPost_ShouldRedirectToIndex_Success(int studentID)
+        {
+            configureRepository(studentID);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.ControllerContext = CreateControllerContextObject();
+            sut.ValueProvider = new FormCollection().ToValueProvider();
+            //In this case, index does not have parameters
+            sut.WithCallTo(x => x.EditPost(studentID)).ShouldRedirectTo(x => x.Index);
+        }
+
         #endregion Edit
+        #region Delete
+        [Test]
+        public void DeleteGet_ShouldReturnBadRequestResponse()
+        {
+            var sut = new StudentController();
+            sut.WithCallTo(x => x.Delete(null,false)).ShouldGiveHttpStatus(HttpStatusCode.BadRequest);
+        }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public void DeleteGet_ShouldReturnNotFoundResponse(bool saveChangesError)
+        {
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.Delete(inexistentStudentID, saveChangesError)).ShouldGiveHttpStatus(HttpStatusCode.NotFound);
+        }
+
+        [TestCase(1,true)]
+        [TestCase(1,false)]
+        [TestCase(2,true)]
+        [TestCase(2,false)]
+        public void DeleteGet_ShouldReturnDefaultView(int studentID, bool saveChangesError)
+        {
+            configureRepository(studentID);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.Delete(studentID, saveChangesError)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
+        }
+        /// <summary>
+        /// Delete, POST
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <param name="saveChangesError"></param>
+        [Test]
+        public void DeletePost_ShouldReturnBadRequestResponse()
+        {
+            var sut = new StudentController();
+            sut.WithCallTo(x => x.Delete_Post(null)).ShouldGiveHttpStatus(HttpStatusCode.BadRequest);
+        }
+
+        [Test]
+        public void DeletePost_ShouldReturnNotFoundResponse()
+        {
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            sut.WithCallTo(x => x.Delete_Post(inexistentStudentID)).ShouldGiveHttpStatus(HttpStatusCode.NotFound);
+        }
+
+        [Test]
+        public void DeletePost_ShouldReedirectToDeleteGetForException()
+        {
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            _fakeUnitOfWork.SetupGet(u => u.StudentRepo).Returns((Repository<Student>)null);
+            sut.WithCallTo(x => x.Delete_Post(inexistentStudentID)).ShouldRedirectTo<int?,bool?>( x => x.Delete);
+        }
+
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        public void DeletePost_ShouldRedirectToIndex_Success(int studentID)
+        {
+            configureRepository(studentID);
+            var sut = new StudentController(_fakeUnitOfWork.Object);
+            _fakeRepo.Setup(r => r.Delete(It.IsAny<Student>())).Callback( (Student student) => { });
+            _fakeUnitOfWork.Setup(u => u.Commit()).Callback(() => { });
+            sut.WithCallTo(x => x.Delete_Post(studentID)).ShouldRedirectTo(x => x.Index);
+        }
+        #endregion
     }
 }

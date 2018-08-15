@@ -103,28 +103,36 @@ namespace EFApproaches.Controllers
         // POST: Students/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        //If student cannot be updated return default view with student object
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public ActionResult EditPost(int? id)
         {
-            if (id == null)
+            Student studentToUpdate = null;
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var studentToUpdate = unitOfWork.StudentRepo.GetById(id);
-            if (TryUpdateModel(studentToUpdate, "",
-               new string[] { "LastName", "FirstMidName", "EnrollmentDate" }))
-            {
-                try
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                studentToUpdate = unitOfWork.StudentRepo.GetById(id);
+                if (null == studentToUpdate)
+                {
+                    ModelState.AddModelError("NullModelError", "The student you tried to update was not found");
+                    studentToUpdate = new Student();
+                }
+                if (TryUpdateModel(studentToUpdate, "",
+                    new string[] { "LastName", "FirstMidName", "EnrollmentDate" }))
                 {
                     unitOfWork.Commit();
                     return RedirectToAction("Index");
                 }
-                catch (DataException /* dex */)
-                {
-                    //Log the error (uncomment dex variable name and add a line here to write a log.
-                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
-                }
+            }
+            catch (Exception ex )
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("SaveChangesExceptionError", "Unable to save changes. " + ex.Message);
+                return View(new Student());
             }
             return View(studentToUpdate);
         }
@@ -151,15 +159,23 @@ namespace EFApproaches.Controllers
         // POST: Students/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public ActionResult Delete_Post(int? id)
         {
             try
             {
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
                 Student student = unitOfWork.StudentRepo.GetById(id);
+                if (null == student)
+                {
+                    return HttpNotFound();
+                }
                 unitOfWork.StudentRepo.Delete(student);
                 unitOfWork.Commit();
             }
-            catch (Exception/* dex */)
+            catch (Exception ex)
             {
                 //Log the error (uncomment dex variable name and add a line here to write a log.
                 return RedirectToAction("Delete", new { id = id, saveChangesError = true });

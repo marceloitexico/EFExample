@@ -181,8 +181,8 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\es\System.Web.Raz
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CoreCompileInputs.cache
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CopyComplete
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
