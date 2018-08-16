@@ -26,6 +26,7 @@ namespace EFCodeFirstTest.ControllersTests
         private Mock<IContext> _fakeContext = null;
         private Mock<IRepository<Student>> _fakeRepo = null;
         private Mock<IUnitOfWork> _fakeUnitOfWork = null;
+        private Mock<DbSet<Student>> _fakeDbSet = null;
         private static byte inexistentStudentID = 0;
         #endregion private members
         #region Setup And TearDown
@@ -45,15 +46,42 @@ namespace EFCodeFirstTest.ControllersTests
         [OneTimeTearDown]
         public void CleanupOncePerRun()
         {
-            Console.WriteLine("Final message");
+            //Console.WriteLine("Final message");
+            _fakeContext.Reset();
+            _fakeRepo.Reset();
+            _fakeUnitOfWork.Reset();
         }
         [SetUp]
         public void InitializeBeforeEachTest()
         {
-            TestContext.Out.WriteLine(TestContext.CurrentContext.Test.MethodName);
+            TestContext.WriteLine("asdsadsa");
+            TestContext.Out.WriteLine("Method name: " + TestContext.CurrentContext.Test.MethodName);
         }
+
         [TearDown]
-        public void CleanupAfterEachTestFuncto() { }
+        public void CleanupAfterEachTest()
+        {
+           
+        }
+
+        private void InitializeContext()
+        {
+            _fakeContext.Reset();
+            _fakeContext.SetupGet(c => c.Students).Returns(_fakeDbSet.Object);
+        }
+
+        private void InitializeRepository()
+        {
+            _fakeRepo.Reset();
+            _fakeRepo.SetupGet<IEnumerable<Student>>(r => r.DataSet).Returns(_fakeContext.Object.Students);
+        }
+
+        private void InitializeUOF()
+        {
+            _fakeUnitOfWork.Reset();
+            _fakeUnitOfWork.SetupGet<IRepository<Student>>(u => u.StudentRepo).Returns(_fakeRepo.Object);
+        }
+
         #endregion Setup And TearDown
         #region  privateHelpMethods
         /// <summary>
@@ -80,16 +108,16 @@ namespace EFCodeFirstTest.ControllersTests
         {
             var data = generateStudentsList();
             //create a mock for DbSet of students
-            var set = new Mock<DbSet<Student>>()
+            _fakeDbSet = new Mock<DbSet<Student>>()
                 .SetupData(data);
             var context = new Mock<IContext>();
             //context.Setup(sc => sc.Set<Student>()).Returns(set.Object); 
-            context.SetupGet(c => c.Students).Returns(set.Object);
+            context.SetupGet(c => c.Students).Returns(_fakeDbSet.Object);
             return context;
         }
 
         /// <summary>
-        /// Configure Fake Repository to return an student given an ID
+        /// Configure Fake Repository to return an student given an specific ID
         /// </summary>
         /// <param name="studentID"></param>
         private void configureRepository(int studentID)
@@ -123,13 +151,11 @@ namespace EFCodeFirstTest.ControllersTests
         [Test]
         public void ShouldRenderIndexViewWithModel()
         {
-            var context = generateFakeContextWithData();
             //*--> change it to call contructor with Unit of work as parameter
             var sut = new StudentController(_fakeUnitOfWork.Object);
             // Check the type of the model
             var ds = _fakeUnitOfWork.Object.StudentRepo.DataSet;
             sut.WithCallTo(x => x.Index()).ShouldRenderDefaultView().WithModel<IEnumerable<Student>>(ds);
-            
         }
         #endregion Index
         #region Details
@@ -139,14 +165,15 @@ namespace EFCodeFirstTest.ControllersTests
             var sut = new StudentController();
             sut.WithCallTo(x => x.Details(null)).ShouldGiveHttpStatus(System.Net.HttpStatusCode.BadRequest);
         }
-
+        
         [TestCase(-1)]
         [TestCase(-2)]
         public void DetailsShouldReturnNotFoundResultForInexistentID(int studentID)
         {
             configureRepository(studentID);
             var sut = new StudentController(_fakeUnitOfWork.Object);
-            sut.WithCallTo(x => x.Details(-1)).ShouldGiveHttpStatus(System.Net.HttpStatusCode.NotFound);
+            sut.WithCallTo(x => x.Details(studentID)).ShouldGiveHttpStatus(System.Net.HttpStatusCode.NotFound);
+            InitializeRepository();
         }
 
         [TestCase(1)]
@@ -160,6 +187,7 @@ namespace EFCodeFirstTest.ControllersTests
             var sut = new StudentController(_fakeUnitOfWork.Object);
             //Action and Assert
             sut.WithCallTo(x => x.Details(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
+            InitializeRepository();
         }
         #endregion Details_ID
         #region Create
@@ -184,6 +212,8 @@ namespace EFCodeFirstTest.ControllersTests
             _fakeUnitOfWork.Setup(u => u.Commit()).Callback(() =>{});
             var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Create(mockStudent.Object)).ShouldRedirectTo(x => x.Index);
+            InitializeRepository();
+            InitializeUOF();
         }
         [Test]
         public void CreatePostGetInvalidModelError()
@@ -202,6 +232,7 @@ namespace EFCodeFirstTest.ControllersTests
             var std = new Student { ID = 23 };
             var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Create(std)).ShouldRenderDefaultView().WithModel<Student>().AndModelError("ExecptionError");
+            InitializeUOF();
         }
         #endregion Create
         #region Edit
@@ -218,6 +249,7 @@ namespace EFCodeFirstTest.ControllersTests
             _fakeRepo.Setup(r => r.GetById(It.IsAny<int>())).Returns((Student)null);
             var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Edit(It.IsAny<int>())).ShouldGiveHttpStatus(HttpStatusCode.NotFound);
+            InitializeRepository();
         }
 
         [TestCase(1)]
@@ -229,6 +261,7 @@ namespace EFCodeFirstTest.ControllersTests
             configureRepository(studentID);
             var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Edit(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
+            InitializeRepository();
         }
 
         /// <summary>
@@ -256,6 +289,7 @@ namespace EFCodeFirstTest.ControllersTests
             configureRepository(studentID);
             var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.EditPost(studentID)).ShouldRenderDefaultView().WithModel<Student>().AndModelError("SaveChangesExceptionError");
+            InitializeRepository();
         }
 
         [TestCase(1)]
@@ -270,8 +304,8 @@ namespace EFCodeFirstTest.ControllersTests
             sut.ValueProvider = new FormCollection().ToValueProvider();
             //In this case, index does not have parameters
             sut.WithCallTo(x => x.EditPost(studentID)).ShouldRedirectTo(x => x.Index);
+            InitializeRepository();
         }
-
         #endregion Edit
         #region Delete
         [Test]
@@ -298,6 +332,7 @@ namespace EFCodeFirstTest.ControllersTests
             configureRepository(studentID);
             var sut = new StudentController(_fakeUnitOfWork.Object);
             sut.WithCallTo(x => x.Delete(studentID, saveChangesError)).ShouldRenderDefaultView().WithModel<Student>().AndNoModelErrors();
+            InitializeRepository();
         }
         /// <summary>
         /// Delete, POST
@@ -318,12 +353,14 @@ namespace EFCodeFirstTest.ControllersTests
             sut.WithCallTo(x => x.Delete_Post(inexistentStudentID)).ShouldGiveHttpStatus(HttpStatusCode.NotFound);
         }
 
-        [Test]
-        public void DeletePost_ShouldReedirectToDeleteGetForException()
+        [Test, Property("InitializeUOF", 1)]
+        public void DeletePost_ShouldRedirectToDeleteGetForException()
         {
             var sut = new StudentController(_fakeUnitOfWork.Object);
-            _fakeUnitOfWork.SetupGet(u => u.StudentRepo).Returns((Repository<Student>)null);
+            _fakeUnitOfWork.SetupGet(u => u.StudentRepo).Throws(new Exception());
+            // also works: _fakeUnitOfWork.SetupGet(u => u.StudentRepo).Returns((Repository<Student>)null);
             sut.WithCallTo(x => x.Delete_Post(inexistentStudentID)).ShouldRedirectTo<int?,bool?>( x => x.Delete);
+            InitializeUOF();
         }
 
         [TestCase(1)]
@@ -337,6 +374,8 @@ namespace EFCodeFirstTest.ControllersTests
             _fakeRepo.Setup(r => r.Delete(It.IsAny<Student>())).Callback( (Student student) => { });
             _fakeUnitOfWork.Setup(u => u.Commit()).Callback(() => { });
             sut.WithCallTo(x => x.Delete_Post(studentID)).ShouldRedirectTo(x => x.Index);
+            InitializeRepository();
+            InitializeUOF();
         }
         #endregion
     }
