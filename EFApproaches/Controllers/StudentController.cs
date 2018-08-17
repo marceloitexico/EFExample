@@ -16,14 +16,10 @@ namespace EFApproaches.Controllers
     public class StudentController : BaseController
     {
         #region private members
-
-        private string schoolDomain = ConfigurationManager.AppSettings["SchoolDomain"];
         #endregion private members
         #region constructor
         public StudentController() { }
         public StudentController(IUnitOfWork unitOfWork) : base(unitOfWork){}
-        public StudentController(SchoolContext schoolContext) 
-        : base(schoolContext){}
         #endregion constructor
 
         // GET: Students
@@ -83,7 +79,6 @@ namespace EFApproaches.Controllers
             return View(student);
         }
 
-       
         // GET: Students/Edit/5
         public ActionResult Edit(int? id)
         {

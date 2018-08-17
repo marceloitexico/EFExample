@@ -2,6 +2,7 @@
 using EFApproaches.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -11,16 +12,13 @@ namespace EFApproaches.Controllers
 {
     public class BaseController : Controller
     {
+        protected string schoolDomain = ConfigurationManager.AppSettings["SchoolDomain"];
         protected static IUnitOfWork unitOfWork;
         //private IUnitOfWork unitOfWork1;
 
         public BaseController()
         {
             unitOfWork = new UnitOfWork();
-        }
-        public BaseController(SchoolContext ctx)
-        {
-            unitOfWork = new UnitOfWork(ctx);
         }
 
         public BaseController(IUnitOfWork unitofwork)

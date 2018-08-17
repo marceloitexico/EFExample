@@ -10,7 +10,8 @@ namespace EFApproaches.DAL.Interfaces
     public interface IUnitOfWork
     {
         SchoolContext DbContext { get; set; }
-        IRepository<Student> StudentRepo { get; set; }
+        IRepository<Student> StudentRepo { get; }
+        IRepository<Course> CourseRepo { get; }
         void Commit();
         void Dispose();
     }

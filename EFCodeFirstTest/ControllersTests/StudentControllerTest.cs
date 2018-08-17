@@ -20,19 +20,20 @@ using System.Web.Routing;
 namespace EFCodeFirstTest.ControllersTests
 {
     [TestFixture]
-    public class StudentControllerTest
+    public class StudentControllerTest : BaseControllerTest
     {
         #region private members
-        private Mock<IContext> _fakeContext = null;
+        
         private Mock<IRepository<Student>> _fakeRepo = null;
-        private Mock<IUnitOfWork> _fakeUnitOfWork = null;
         private Mock<DbSet<Student>> _fakeDbSet = null;
         private static byte inexistentStudentID = 0;
         #endregion private members
         #region Setup And TearDown
         [OneTimeSetUp]
-        public void InitilizeOncePerRun()
+        public override void  InitializeOncePerRun()
         {
+            var data = generateStudentsList();
+            _fakeDbSet = new Mock<DbSet<Student>>().SetupData(data);
             //Console.WriteLine("Initial message");
             _fakeContext = generateFakeContextWithData();
             //Create a new Mock of repository
@@ -104,12 +105,8 @@ namespace EFCodeFirstTest.ControllersTests
         /// //create fake context with data in memory
         /// </summary>
         /// <returns></returns>
-        private Mock<IContext> generateFakeContextWithData()
+        public override Mock<IContext> generateFakeContextWithData()
         {
-            var data = generateStudentsList();
-            //create a mock for DbSet of students
-            _fakeDbSet = new Mock<DbSet<Student>>()
-                .SetupData(data);
             var context = new Mock<IContext>();
             //context.Setup(sc => sc.Set<Student>()).Returns(set.Object); 
             context.SetupGet(c => c.Students).Returns(_fakeDbSet.Object);

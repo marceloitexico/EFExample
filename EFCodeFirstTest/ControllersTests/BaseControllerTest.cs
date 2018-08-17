@@ -10,14 +10,12 @@ using System.Threading.Tasks;
 namespace EFCodeFirstTest.ControllersTests
 {
     [TestFixture]
-    public class BaseControllerTest
+    public abstract class BaseControllerTest
     {
-        protected internal Mock<IUnitOfWork> _mockUnitOfWork;
-
+        protected internal Mock<IUnitOfWork> _fakeUnitOfWork = null;
+        protected internal Mock<IContext> _fakeContext = null;
         [OneTimeSetUp]
-        public void InitilizeOncePerRun()
-        {
-            Console.WriteLine("Initial message");
-        }
+        public abstract void InitializeOncePerRun();
+        public abstract Mock<IContext> generateFakeContextWithData();
     }
 }

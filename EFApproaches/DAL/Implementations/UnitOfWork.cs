@@ -11,6 +11,7 @@ namespace EFApproaches.DAL.Implementations
     {
         //Private members corresponding to each concrete repository
         public  Repository<Student> studentRepo;
+        
         private Repository<Enrollment> enrollmentRepo;
         private Repository<Course> courseRepo;
         private bool disposed = false;
@@ -35,7 +36,6 @@ namespace EFApproaches.DAL.Implementations
                 }
                 return studentRepo;
             }
-            set { }
         }
 
         //Accessor for private enrollment repository, creates repository if null
