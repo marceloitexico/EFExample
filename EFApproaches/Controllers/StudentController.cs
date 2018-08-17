@@ -122,7 +122,7 @@ namespace EFApproaches.Controllers
                     studentToUpdate = new Student();
                 }
                 if (TryUpdateModel(studentToUpdate, "",
-                    new string[] { "LastName", "FirstMidName", "EnrollmentDate" }))
+                    new string[] { "LastName", "FirstMidName", "EmailAddress", "EnrollmentDate" }))
                 {
                     unitOfWork.Commit();
                     return RedirectToAction("Index");
@@ -157,7 +157,7 @@ namespace EFApproaches.Controllers
         }
 
         // POST: Students/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult Delete_Post(int? id)
         {
