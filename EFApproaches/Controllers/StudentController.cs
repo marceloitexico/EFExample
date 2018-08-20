@@ -16,6 +16,7 @@ namespace EFApproaches.Controllers
     public class StudentController : BaseController
     {
         #region private members
+        private static byte inexistentStudentID = 0;
         #endregion private members
         #region constructor
         public StudentController() { }
