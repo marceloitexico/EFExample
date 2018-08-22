@@ -15,7 +15,7 @@ using EFApproaches.DAL.Entities;
 namespace EFCodeFirstTest.ViewTests.StudentViewTest
 {
     [TestFixture]
-    public class StudentIndexViewTests
+    public class StudentViewUnitTests
     {
         [Test]
         public void ShouldRenderStudentsList()
@@ -27,7 +27,6 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             bool containsObject2 = str.Contains("Samir") && str.Contains("Lakhani") && str.Contains("slakhani@domain.com") && str.Contains("21/03/2018");
             bool containsObject3 = str.Contains("Camille") && str.Contains("Lozerone") && str.Contains("clozerone@domain.com") && str.Contains("22/04/2018");
             bool containsObject4 = str.Contains("John") && str.Contains("Papa") && str.Contains("jpapa@domain.com") && str.Contains("23/05/2018");
-
             Assert.Multiple(() =>
             {
                 Assert.That(true == containsObject1, "does not contain student 1");

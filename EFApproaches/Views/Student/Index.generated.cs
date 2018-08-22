@@ -144,141 +144,152 @@ WriteLiteral("        <tr>\r\n            <td");
 
 WriteLiteral(" id=\"firstMidNameValue\"");
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("                ");
+WriteLiteral(">\r\n                <!-- ");
 
             
             #line 34 "..\..\Views\Student\Index.cshtml"
-           Write(Html.DisplayFor(model => item.FirstMidName));
+                Write(Html.DisplayFor(model => item.FirstMidName));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </td>\r\n            <td>\r\n");
-
-WriteLiteral("                ");
+WriteLiteral(" -->\r\n                    <span class =\"firstMidNameClass\">");
 
             
-            #line 37 "..\..\Views\Student\Index.cshtml"
-           Write(item.LastName);
+            #line 35 "..\..\Views\Student\Index.cshtml"
+                                                Write(item.FirstMidName);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </td>\r\n            <td>\r\n");
+WriteLiteral("</span> \r\n                </td>\r\n                <td>\r\n");
 
-WriteLiteral("                ");
-
-            
-            #line 40 "..\..\Views\Student\Index.cshtml"
-           Write(item.EmailAddress);
+WriteLiteral("                    ");
 
             
-            #line default
-            #line hidden
-WriteLiteral("\r\n            </td>\r\n            <td>\r\n");
-
-WriteLiteral("                ");
-
-            
-            #line 43 "..\..\Views\Student\Index.cshtml"
-           Write(item.EnrollmentDate);
+            #line 38 "..\..\Views\Student\Index.cshtml"
+               Write(item.LastName);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </td>\r\n            <td>\r\n");
+WriteLiteral("\r\n                </td>\r\n                <td");
 
-WriteLiteral("                ");
+WriteLiteral(" class=\"emailAddressValue\"");
+
+WriteLiteral(">\r\n");
+
+WriteLiteral("                    ");
 
             
-            #line 46 "..\..\Views\Student\Index.cshtml"
-           Write(Html.ActionLink("Edit", "Edit", new { id = item.ID }));
+            #line 41 "..\..\Views\Student\Index.cshtml"
+               Write(item.EmailAddress);
 
             
             #line default
             #line hidden
-WriteLiteral(" |\r\n");
+WriteLiteral("\r\n                </td>\r\n                <td>\r\n");
 
-WriteLiteral("                ");
+WriteLiteral("                    ");
+
+            
+            #line 44 "..\..\Views\Student\Index.cshtml"
+               Write(item.EnrollmentDate);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                </td>\r\n                <td>\r\n");
+
+WriteLiteral("                    ");
 
             
             #line 47 "..\..\Views\Student\Index.cshtml"
-           Write(Html.ActionLink("Details", "Details", new { id = item.ID }));
+               Write(Html.ActionLink("Edit", "Edit", new { id = item.ID }));
 
             
             #line default
             #line hidden
 WriteLiteral(" |\r\n");
 
-WriteLiteral("                ");
+WriteLiteral("                    ");
 
             
             #line 48 "..\..\Views\Student\Index.cshtml"
-           Write(Html.ActionLink("Delete", "Delete", new { id = item.ID }));
+               Write(Html.ActionLink("Details", "Details", new { id = item.ID }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </td>\r\n        </tr>\r\n");
+WriteLiteral(" |\r\n");
+
+WriteLiteral("                    ");
 
             
-            #line 51 "..\..\Views\Student\Index.cshtml"
-    }
+            #line 49 "..\..\Views\Student\Index.cshtml"
+               Write(Html.ActionLink("Delete", "Delete", new { id = item.ID }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n</table>\r\n<div");
+WriteLiteral("\r\n                </td>\r\n            </tr>\r\n");
+
+            
+            #line 52 "..\..\Views\Student\Index.cshtml"
+        }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n    </table>\r\n    <div");
 
 WriteLiteral(" id=\"amountMessagesContainer\"");
 
 WriteLiteral(">\r\n");
 
             
-            #line 55 "..\..\Views\Student\Index.cshtml"
-    
+            #line 56 "..\..\Views\Student\Index.cshtml"
+        
             
             #line default
             #line hidden
             
-            #line 55 "..\..\Views\Student\Index.cshtml"
-     if(Model.Count<Student>() > 3)
-    {
+            #line 56 "..\..\Views\Student\Index.cshtml"
+         if(Model.Count<Student>() > 3)
+        {
 
             
             #line default
             #line hidden
-WriteLiteral("        <div");
+WriteLiteral("            <div");
 
 WriteLiteral(" id=\"MoreThanTwoStudentsMessage\"");
 
 WriteLiteral(">There are more than 3 students</div>\r\n");
 
             
-            #line 58 "..\..\Views\Student\Index.cshtml"
-    }
-    else
-    {
+            #line 59 "..\..\Views\Student\Index.cshtml"
+        }
+        else
+        {
 
             
             #line default
             #line hidden
-WriteLiteral("        <div");
+WriteLiteral("            <div");
 
 WriteLiteral(" id=\"MaxThreeStudentsMessage\"");
 
 WriteLiteral(">There are 3 or less students</div>\r\n");
 
             
-            #line 62 "..\..\Views\Student\Index.cshtml"
-    }
+            #line 63 "..\..\Views\Student\Index.cshtml"
+        }
 
             
             #line default
             #line hidden
-WriteLiteral("</div>\r\n\r\n\r\n");
+WriteLiteral("    </div>\r\n\r\n\r\n");
 
         }
     }

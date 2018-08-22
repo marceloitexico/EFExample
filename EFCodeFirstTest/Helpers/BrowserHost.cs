@@ -24,7 +24,7 @@ namespace BankingSite.FunctionalUITests
                 FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"C:\Users\Developer\Documents\iTexico\Goals 2018");
                 service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
                 Driver = new FirefoxDriver(service);
-                RootUrl = RootUrl = "http://localhost:1468/";
+                RootUrl = RootUrl = "http://localhost:49442/";
                 
             }
             catch (System.Exception ex)

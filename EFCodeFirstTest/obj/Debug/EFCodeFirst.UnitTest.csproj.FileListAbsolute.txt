@@ -65,3 +65,10 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFi
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.pdb
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\RazorGenerator.Mvc.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\WebActivatorEx.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\TestStack.Seleno.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\WebDriver.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\WebDriver.Support.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\TestStack.Seleno.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\TestStack.Seleno.xml
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\WebDriver.xml
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\WebDriver.Support.xml

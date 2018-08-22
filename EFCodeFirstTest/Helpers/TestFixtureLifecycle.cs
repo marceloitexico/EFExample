@@ -8,7 +8,7 @@ namespace BankingSite.FunctionalUITests
     {        
         public void Dispose()              
         {
-            DemoHelperCode.DemoHelper.Wait(5000);
+            DemoHelperCode.Utilities.Wait(5000);
 
             // Cleanup and close browser
             BrowserHost.Driver.Dispose();
