@@ -1,21 +1,22 @@
-﻿@model IEnumerable<EFApproaches.DAL.Entities.Student>
+﻿@using EFApproaches.DAL.Entities
+@model IEnumerable<Student>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
-
+<span id="viewBagMsgContainer">@ViewBag.Message</span>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.FirstMidName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstMidName)
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EmailAddress)
@@ -29,17 +30,17 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+            <td id="firstMidNameValue">
+                @Html.DisplayFor(model => item.FirstMidName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstMidName)
+                @item.LastName
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EmailAddress)
+                @item.EmailAddress
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                @item.EnrollmentDate
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
@@ -50,3 +51,15 @@
     }
 
 </table>
+<div id="amountMessagesContainer">
+    @if(Model.Count<Student>() > 3)
+    {
+        <div id="MoreThanTwoStudentsMessage">There are more than 3 students</div>
+    }
+    else
+    {
+        <div id="MaxThreeStudentsMessage">There are 3 or less students</div>
+    }
+</div>
+
+

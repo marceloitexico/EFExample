@@ -1,6 +1,7 @@
 ﻿using EFApproaches.Controllers;
 using EFApproaches.DAL.Entities;
 using EFApproaches.DAL.Interfaces;
+using EFCodeFirstTest.Helpers;
 using Moq;
 using NUnit.Framework;
 using System;
@@ -27,7 +28,7 @@ namespace EFCodeFirstTest.ControllersTests
         [OneTimeSetUp]
         protected override void InitializeOncePerRun()
         {
-            var data = generateCoursesList();
+            var data = DataHelper.GenerateCoursesList();
             _fakeDbSet = new Mock<DbSet<Course>>().SetupData(data);
             //Console.WriteLine("Initial message");
             _fakeContext = generateFakeContextWithData();
@@ -66,18 +67,6 @@ namespace EFCodeFirstTest.ControllersTests
         }
         #endregion
         #region privateHelpMethods
-        private List<Course> generateCoursesList()
-        {
-            var data = new List<Course>
-            {
-                new Course {CourseID = 1, Title = "Computers Architechture II", Credits = 8 },
-                new Course {CourseID = 2, Title = "Artificial Intelligence", Credits = 7 },
-                new Course {CourseID = 3, Title = "Compilers Theory", Credits = 10 },
-                new Course {CourseID = 4, Title = "Operating Systems", Credits = 12 },
-                new Course {CourseID = 5, Title = "Graphs Theory II", Credits = 12 },
-            };
-            return data;
-        }
 
         [OneTimeTearDown]
         protected void CleanupOncePerRun()

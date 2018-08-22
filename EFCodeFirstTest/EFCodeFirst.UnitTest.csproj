@@ -48,6 +48,9 @@
     <Reference Include="EntityFramework.Testing.Moq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFrameworkTesting.Moq.1.2.2\lib\net45\EntityFramework.Testing.Moq.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.7.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.7\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -56,6 +59,15 @@
     </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorGenerator.Mvc.2.4.9\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Testing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorGenerator.Testing.2.4.7\lib\net40\RazorGenerator.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="ReflectionMagic, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReflectionMagic.2.0.0\lib\net40\ReflectionMagic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -95,16 +107,24 @@
     <Reference Include="TestStack.FluentMVCTesting, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TestStack.FluentMVCTesting.3.0.0\lib\NET45\TestStack.FluentMVCTesting.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="ControllersTests\BaseControllerTest.cs" />
     <Compile Include="ControllersTests\CourseControllerTest.cs" />
     <Compile Include="ControllersTests\StudentControllerTest.cs" />
     <Compile Include="EFCodeFirstSettings.cs" />
+    <Compile Include="Helpers\BrowserHost.cs" />
+    <Compile Include="Helpers\DataHelper.cs" />
+    <Compile Include="Helpers\TestFixtureLifecycle.cs" />
     <Compile Include="ModelTests\Implementations\CourseTest.cs" />
     <Compile Include="ModelTests\Interfaces\IModelTest.cs" />
     <Compile Include="ModelTests\Implementations\StudentTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewTests\StudentViewTest\StudentIndexViewTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -41,6 +41,8 @@ namespace EFApproaches.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Title,Credits")] Course course)
         {
             try

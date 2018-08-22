@@ -16,6 +16,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using EFCodeFirstTest.Helpers;
 
 namespace EFCodeFirstTest.ControllersTests
 {
@@ -23,7 +24,6 @@ namespace EFCodeFirstTest.ControllersTests
     public class StudentControllerTest : BaseControllerTest
     {
         #region private members
-        
         private Mock<IRepository<Student>> _fakeRepo = null;
         private Mock<DbSet<Student>> _fakeDbSet = null;
         private static byte inexistentStudentID = 0;
@@ -32,7 +32,7 @@ namespace EFCodeFirstTest.ControllersTests
         [OneTimeSetUp]
         protected override void  InitializeOncePerRun()
         {
-            var data = generateStudentsList();
+            var data = DataHelper.GenerateStudentsList();
             _fakeDbSet = new Mock<DbSet<Student>>().SetupData(data);
             //Console.WriteLine("Initial message");
             _fakeContext = generateFakeContextWithData();
@@ -73,21 +73,7 @@ namespace EFCodeFirstTest.ControllersTests
 
         #endregion Setup And TearDown
         #region  privateHelpMethods
-        /// <summary>
-        ///generate list of data in memory
-        /// </summary>
-        /// <returns></returns>
-        private List<Student> generateStudentsList()
-        {
-            var data = new List<Student>
-            {
-                new Student {ID = 1, FirstMidName = "Nathan", LastName = "Eldridge" },
-                new Student {ID = 2, FirstMidName = "Samir", LastName = "Lakhani" },
-                new Student {ID = 3, FirstMidName = "Camille", LastName = "Lozerone" },
-                new Student {ID = 4, FirstMidName = "John", LastName = "Papa" },
-            };
-            return data;
-        }
+        
 
         /// <summary>
         /// //create fake context with data in memory
@@ -116,7 +102,6 @@ namespace EFCodeFirstTest.ControllersTests
                 throw;
             }
         }
-
         
         #endregion  privateHelpMethods
         #region Index

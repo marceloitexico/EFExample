@@ -8,9 +8,12 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFr
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFramework.Testing.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFramework.Testing.Moq.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\Moq.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\nunit.framework.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\RazorGenerator.Testing.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\ReflectionMagic.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.ValueTuple.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\System.Web.Helpers.dll
@@ -32,6 +35,8 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFr
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFramework.Testing.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EntityFramework.Testing.Moq.xml
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\Moq.pdb
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\Moq.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\nunit.framework.pdb
@@ -58,3 +63,5 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFi
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirst.UnitTest.csproj.CopyComplete
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\obj\Debug\EFCodeFirstTest.pdb
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\RazorGenerator.Mvc.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\WebActivatorEx.dll
