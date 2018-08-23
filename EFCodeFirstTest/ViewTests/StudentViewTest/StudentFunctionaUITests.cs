@@ -13,6 +13,10 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
     [TestFixture]
     public class StudentFunctionaUITests
     {
+
+        /// <summary>
+        ///This method creates a new student in the database (affects persistent data)
+        /// </summary>
         [Test]
         public void ShouldAcceptLoanApplication()
         {
@@ -33,7 +37,7 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             var createButton = BrowserHost.Driver.FindElement(By.Id("createBtn"));
             createButton.Click();
             Utilities.Wait();
-            var students = BrowserHost.Driver.FindElements(By.ClassName("firstMidNameClass"));
+            /*var students = BrowserHost.Driver.FindElements(By.ClassName("firstMidNameClass"));
             bool studentExists = false;
             foreach (var item in students)
             {
@@ -42,8 +46,15 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
                     studentExists = true;
                     break;
                 }
-            }
-            Assert.That(true, Is.EqualTo(studentExists));
+            }*/
+
+            var newStudent = BrowserHost.Driver.FindElement(By.XPath("//span[text()='" + randomFirstMidName + "']"));//td[text()='UserID']		
+             Assert.That(newStudent, Is.Not.Null);
+
+            var deleteStudentLink = newStudent.FindElement(By.XPath("ancestor::tr//descendant::a[@class='deleteStudent']"));
+            deleteStudentLink.Click();
+            //Delete created student
+            //var parent = BrowserHost.Driver.FindElement(By.XPath(""))
         }
     }
 }

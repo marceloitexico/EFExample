@@ -227,7 +227,7 @@ WriteLiteral("                    ");
 
             
             #line 49 "..\..\Views\Student\Index.cshtml"
-               Write(Html.ActionLink("Delete", "Delete", new { id = item.ID }));
+               Write(Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class ="deleteStudent" }));
 
             
             #line default
