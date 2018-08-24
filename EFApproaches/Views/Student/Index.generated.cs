@@ -162,50 +162,53 @@ WriteLiteral(" -->\r\n                    <span class =\"firstMidNameClass\">");
             
             #line default
             #line hidden
-WriteLiteral("</span> \r\n                </td>\r\n                <td>\r\n");
-
-WriteLiteral("                    ");
+WriteLiteral("</span> \r\n                </td>\r\n                <td>\r\n                   <span c" +
+"lass =\"lastNameClass\"> ");
 
             
             #line 38 "..\..\Views\Student\Index.cshtml"
-               Write(item.LastName);
+                                            Write(item.LastName);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                </td>\r\n                <td");
+WriteLiteral("</span>\r\n                </td>\r\n                <td");
 
 WriteLiteral(" class=\"emailAddressValue\"");
 
-WriteLiteral(">\r\n");
+WriteLiteral(">\r\n                    <span");
 
-WriteLiteral("                    ");
+WriteLiteral(" class=\"emailAddressClass\"");
+
+WriteLiteral("> ");
 
             
             #line 41 "..\..\Views\Student\Index.cshtml"
-               Write(item.EmailAddress);
+                                                Write(item.EmailAddress);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                </td>\r\n                <td>\r\n");
+WriteLiteral("</span>\r\n</td>\r\n                <td>\r\n                    <span");
 
-WriteLiteral("                    ");
+WriteLiteral(" class=\"enrollmentDateClass\"");
+
+WriteLiteral("> ");
 
             
             #line 44 "..\..\Views\Student\Index.cshtml"
-               Write(item.EnrollmentDate);
+                                                  Write(item.EnrollmentDate.ToShortDateString());
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                </td>\r\n                <td>\r\n");
+WriteLiteral(" </span>\r\n</td>\r\n                <td>\r\n");
 
 WriteLiteral("                    ");
 
             
             #line 47 "..\..\Views\Student\Index.cshtml"
-               Write(Html.ActionLink("Edit", "Edit", new { id = item.ID }));
+               Write(Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editStudent" }));
 
             
             #line default
@@ -216,7 +219,7 @@ WriteLiteral("                    ");
 
             
             #line 48 "..\..\Views\Student\Index.cshtml"
-               Write(Html.ActionLink("Details", "Details", new { id = item.ID }));
+               Write(Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "detailsStudent" }));
 
             
             #line default

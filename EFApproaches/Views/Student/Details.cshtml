@@ -15,7 +15,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LastName)
+            <span id="firstMidNameSpan"> @Model.FirstMidName </span>
         </dd>
 
         <dt>
@@ -23,7 +23,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FirstMidName)
+            <span id="lastNameSpan"> @Model.LastName </span>
         </dd>
 
         <dt>
@@ -31,7 +31,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EmailAddress)
+            <span id="emailAddressSpan"> @Model.EmailAddress </span>
         </dd>
 
         <dt>
@@ -39,7 +39,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EnrollmentDate)
+            <span id="enrollmentDateSpan"> @Model.EnrollmentDate </span>
         </dd>
         <!--Enrollments information *lastedit-->
         <dt>
@@ -61,12 +61,12 @@
                             @Html.DisplayFor(modelItem => item.Grade)
                         </td>
                     </tr>
-                }k
+                }
             </table>
         </dd>
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new { id ="backToListLink" })
 </p>

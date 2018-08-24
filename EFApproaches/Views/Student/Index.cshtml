@@ -35,17 +35,17 @@
                     <span class ="firstMidNameClass">@item.FirstMidName</span> 
                 </td>
                 <td>
-                    @item.LastName
+                   <span class ="lastNameClass"> @item.LastName</span>
                 </td>
                 <td class="emailAddressValue">
-                    @item.EmailAddress
-                </td>
+                    <span class="emailAddressClass"> @item.EmailAddress</span>
+</td>
                 <td>
-                    @item.EnrollmentDate
-                </td>
+                    <span class="enrollmentDateClass"> @item.EnrollmentDate.ToShortDateString() </span>
+</td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editStudent" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "detailsStudent" }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class ="deleteStudent" })
                 </td>
             </tr>
