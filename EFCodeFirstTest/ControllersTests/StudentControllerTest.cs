@@ -160,7 +160,7 @@ namespace EFCodeFirstTest.ControllersTests
         /// <summary>
         /// Validate Model
         /// No model errors
-        /// return proper view
+        /// return proper view with student containing the dynamically generated email
         /// </summary>
         [Test]
         public override void CreatePostShouldRedirectToIndex_Success()

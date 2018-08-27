@@ -43,7 +43,7 @@ namespace EFCodeFirst.UnitTest.Implementations
                 {
                     if (true == string.IsNullOrEmpty(schoolDomain))
                     {
-                        schoolDomain = getSchoolDomain();
+                        schoolDomain = EFCodeFirstSettings.getSchoolDomain();
                     }
                 }
             }
@@ -100,15 +100,6 @@ namespace EFCodeFirst.UnitTest.Implementations
         }
 
         #region private methods
-        private string getSchoolDomain()
-        {
-            string path = EFCodeFirstSettings.EFApproachesWebConfigFile;
-            XDocument xdoc = XDocument.Load(path);
-            var schoolDomain = xdoc.Element("configuration").Element("appSettings").Elements("add")
-                            .Where(x => (string)x.Attribute("key") == "SchoolDomain")
-                            .Single().Attribute("value");
-            return schoolDomain.Value;
-        }
         #endregion private methods
     }
 

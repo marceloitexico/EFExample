@@ -21,6 +21,7 @@ namespace EFApproaches.DAL.Entities
         public string LastName { get; set; }
         [Required]
         public string FirstMidName { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime EnrollmentDate { get; set; }
         public  string EmailAddress { get; set; }
         public string FullName { get; set; }

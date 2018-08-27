@@ -21,57 +21,83 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
         [Test]
         public void ShouldCreateThenDeleteANewStudent()
         {
-            OpenQA.Selenium.IWebElement newStudent = null;
+            OpenQA.Selenium.IWebElement newStudentIDElement = null;
             OpenQA.Selenium.IWebElement deleteStudentLink = null;
             OpenQA.Selenium.IWebElement editStudentLink = null;
             OpenQA.Selenium.IWebElement detailsStudentLink = null;
             //Create Student
-            string randomFirstMidName = CreateStudent();
+            Student createdStudent = CreateStudent();
+            string randomFirstMidName = createdStudent.FirstMidName;
             var newStudentInIndexXPath = "//span[text()='" + randomFirstMidName + "']";
-
             Utilities.Wait(standardTimeBetweenPagesMS);
-           
             //should exist in students list
-             newStudent = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+            //-->DELETE var indexViewCreatedStudent = getNewStudentFromIndexView(newStudentInIndexXPath);
+            newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+
             Assert.Multiple(() =>
             {
-               Assert.That(newStudent, Is.Not.Null);
+               Assert.That(newStudentIDElement, Is.Not.Null);
 
-               if (null != newStudent)
+               if (null != newStudentIDElement)
                {
-                    //see details of student
-                    Student detailsStudent = new Student();
                     //--> fill student index info
-                   detailsStudentLink = newStudent.FindElements(By.XPath("ancestor::tr//descendant::a[@class='detailsStudent']")).FirstOrDefault();
-                    SeeDetailsStudent(detailsStudentLink, detailsStudent);
+                    detailsStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='detailsStudent']")).FirstOrDefault();
+                    //Assert for details of created student
+                    SeeStudentsDetails(detailsStudentLink, createdStudent);
                     //Edit student
-                    newStudent = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
-                   editStudentLink = newStudent.FindElements(By.XPath("ancestor::tr//descendant::a[@class='editStudent']")).FirstOrDefault();
-                   var student = EditStudent(editStudentLink, randomFirstMidName);
+                    //->newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+                    //->editStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='editStudent']")).FirstOrDefault();
+                    editStudentLink = getIndexLinkElement(newStudentInIndexXPath, "editStudent");
 
-                    //Verify new values
-                    //  -lastName
-                    newStudent = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
-                    var editedLastName = newStudent.FindElements(By.XPath("ancestor::tr//descendant::span[@class='lastNameClass']")).FirstOrDefault();
-                   Assert.That(student.LastName, Is.EqualTo(editedLastName.Text));
-                   //  -enrollmentDate
-                   var editedEnrollmentDate = newStudent.FindElements(By.XPath("ancestor::tr//descendant::span[@class='enrollmentDateClass']")).FirstOrDefault();
-                   Assert.That(student.EnrollmentDate.ToShortDateString(), Is.EqualTo(editedEnrollmentDate.Text));
+                    var editedStudent = EditStudent(editStudentLink, randomFirstMidName);
+
+                    //->newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+                    //->detailsStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='detailsStudent']")).FirstOrDefault();
+                    detailsStudentLink = getIndexLinkElement(newStudentInIndexXPath, "detailsStudent");
+                    //Assert for details of edited student
+                    SeeStudentsDetails(detailsStudentLink, editedStudent);
 
                     //Delete created student
-                   deleteStudentLink = newStudent.FindElements(By.XPath("ancestor::tr//descendant::a[@class='deleteStudent']")).FirstOrDefault();
-                   DeleteStudent(deleteStudentLink);
+                    //->newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+                    //->deleteStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='deleteStudent']")).FirstOrDefault();
+                    deleteStudentLink = getIndexLinkElement(newStudentInIndexXPath, "deleteStudent");
+                    DeleteStudent(deleteStudentLink);
 
-                   //new student should not exist in students list
-                   newStudent = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
-                   Assert.That(newStudent, Is.Null);
+                    //new student should not exist in students list
+                    newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+                    Assert.That(newStudentIDElement, Is.Null);
                }
            });
         }
 
-       
+        private OpenQA.Selenium.IWebElement getIndexLinkElement(string newStudentInIndexXPath, string elementClassName)
+        {
+            OpenQA.Selenium.IWebElement newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
+            var webElement =  newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='" + elementClassName + "']")).FirstOrDefault();
+            return webElement;
+        }
 
-        public string CreateStudent()
+        [Obsolete("this method is not necessary yet",false)]
+        public Student getNewStudentFromIndexView(string studentLocationInIndexXPath)
+        {
+         //  -lastName
+            var newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(studentLocationInIndexXPath)).FirstOrDefault();
+
+            var studentFirstName = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::span[@class='firstNameClass']")).FirstOrDefault();
+            var studentLastName = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::span[@class='lastNameClass']")).FirstOrDefault();
+            var studentEmailAddress = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::span[@class='emailAddressClass']")).FirstOrDefault();
+            var studentEnrollmentDate = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::span[@class='enrollmentDateClass']")).FirstOrDefault();
+            Student viewStudent = new Student
+            {
+                FirstMidName = studentFirstName.Text,
+                LastName = studentLastName.Text,
+                EmailAddress = studentEmailAddress.Text,
+                EnrollmentDate = Convert.ToDateTime(studentEnrollmentDate.Text)
+            };
+            return viewStudent;
+        }
+
+        public Student CreateStudent()
         {
             int randomID = Utilities.GenerateRandomNumber();
             string randomFirstMidName = "Gecko" + randomID.ToString();
@@ -83,12 +109,13 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
                 EmailAddress = "replaceableAddress@Gecko.com",
                 EnrollmentDate = new DateTime(2018,02,02)
             };
+            newStudentData.GenerateEmailFromName(EFCodeFirstSettings.getSchoolDomain());
             captureDataIntoStudentForm(newStudentData,true);
 
             Utilities.Wait(200);
             var createButton = BrowserHost.Driver.FindElement(By.Id("createBtn"));
             createButton.Click();
-            return randomFirstMidName;
+            return newStudentData;
         }
 
         public void captureDataIntoStudentForm(Student studentData, bool isCreating = false)
@@ -119,7 +146,7 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             Utilities.Wait(standardTimeBetweenPagesMS);
         }
 
-        private void SeeDetailsStudent(OpenQA.Selenium.IWebElement detailsStudentLink, Student newStudentData)
+        private void SeeStudentsDetails(OpenQA.Selenium.IWebElement detailsStudentLink, Student newStudentData)
         {
             detailsStudentLink.Click();
             Utilities.Wait(standardTimeBetweenPagesMS);
@@ -134,7 +161,11 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             Assert.That(newStudentData.EmailAddress, Is.EqualTo(element.Text));
 
             element = BrowserHost.Driver.FindElement(By.Id("enrollmentDateSpan"));
-            Assert.That(newStudentData.EnrollmentDate, Is.EqualTo(element.Text));
+            Assert.That(newStudentData.EnrollmentDate.ToShortDateString(), Is.EqualTo(element.Text));
+
+            var backToListLink = BrowserHost.Driver.FindElement(By.Id("backToListLink"));
+            backToListLink.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
         }
 
         public Student EditStudent(OpenQA.Selenium.IWebElement editStudentLink, string randomFirstMidName)

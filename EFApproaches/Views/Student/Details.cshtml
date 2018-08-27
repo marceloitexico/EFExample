@@ -39,7 +39,7 @@
         </dt>
 
         <dd>
-            <span id="enrollmentDateSpan"> @Model.EnrollmentDate </span>
+            <span id="enrollmentDateSpan"> @Model.EnrollmentDate.ToShortDateString() </span>
         </dd>
         <!--Enrollments information *lastedit-->
         <dt>
@@ -67,6 +67,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index", new { id ="backToListLink" })
+    @Html.ActionLink("Edit", "Edit", null,  new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index", null, new { id ="backToListLink" })
 </p>
