@@ -37,29 +37,24 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             Assert.Multiple(() =>
             {
                Assert.That(newStudentIDElement, Is.Not.Null);
-
                if (null != newStudentIDElement)
                {
                     //--> fill student index info
                     detailsStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='detailsStudent']")).FirstOrDefault();
+                    
                     //Assert for details of created student
                     SeeStudentsDetails(detailsStudentLink, createdStudent);
+                    
                     //Edit student
-                    //->newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
-                    //->editStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='editStudent']")).FirstOrDefault();
                     editStudentLink = getIndexLinkElement(newStudentInIndexXPath, "editStudent");
-
                     var editedStudent = EditStudent(editStudentLink, randomFirstMidName);
-
-                    //->newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
-                    //->detailsStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='detailsStudent']")).FirstOrDefault();
+                    
+                    //get link for details
                     detailsStudentLink = getIndexLinkElement(newStudentInIndexXPath, "detailsStudent");
                     //Assert for details of edited student
                     SeeStudentsDetails(detailsStudentLink, editedStudent);
 
                     //Delete created student
-                    //->newStudentIDElement = BrowserHost.Driver.FindElements(By.XPath(newStudentInIndexXPath)).FirstOrDefault();
-                    //->deleteStudentLink = newStudentIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='deleteStudent']")).FirstOrDefault();
                     deleteStudentLink = getIndexLinkElement(newStudentInIndexXPath, "deleteStudent");
                     DeleteStudent(deleteStudentLink);
 
@@ -77,7 +72,7 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             return webElement;
         }
 
-        [Obsolete("this method is not necessary yet",false)]
+        [Obsolete("this method is not necessary",false)]
         public Student getNewStudentFromIndexView(string studentLocationInIndexXPath)
         {
          //  -lastName
@@ -123,9 +118,13 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             if (true == isCreating)
             {
                 captureDataIntoControl("FirstMidName", studentData.FirstMidName);
+
+            }
+            else
+            {
+                captureDataIntoControl("EmailAddress", studentData.EmailAddress);
             }
             captureDataIntoControl("LastName",studentData.LastName);
-            captureDataIntoControl("EmailAddress", studentData.EmailAddress);
             captureDataIntoControl("EnrollmentDate", studentData.EnrollmentDate.ToShortDateString());
         }
 
