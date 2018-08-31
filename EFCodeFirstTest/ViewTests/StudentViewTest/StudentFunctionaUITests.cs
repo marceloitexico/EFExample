@@ -106,7 +106,6 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             };
             newStudentData.GenerateEmailFromName(EFCodeFirstSettings.getSchoolDomain());
             captureDataIntoStudentForm(newStudentData,true);
-
             Utilities.Wait(200);
             var createButton = BrowserHost.Driver.FindElement(By.Id("createBtn"));
             createButton.Click();
@@ -118,7 +117,6 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             if (true == isCreating)
             {
                 captureDataIntoControl("FirstMidName", studentData.FirstMidName);
-
             }
             else
             {
@@ -184,6 +182,5 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             Utilities.Wait(standardTimeBetweenPagesMS);
             return editStudentData;
         }
-
     }
 }

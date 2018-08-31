@@ -126,12 +126,14 @@
     <Compile Include="ControllersTests\BaseControllerTest.cs" />
     <Compile Include="ControllersTests\CourseControllerTest.cs" />
     <Compile Include="ControllersTests\StudentControllerTest.cs" />
+    <Compile Include="ControllersTests\TeacherControllerTest.cs" />
     <Compile Include="EFCodeFirstSettings.cs" />
     <Compile Include="Helpers\BrowserHost.cs" />
     <Compile Include="Helpers\DataHelper.cs" />
     <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="Helpers\TestFixtureLifecycle.cs" />
     <Compile Include="ModelTests\Implementations\CourseTest.cs" />
+    <Compile Include="ModelTests\Implementations\TeacherTest.cs" />
     <Compile Include="ModelTests\Interfaces\IModelTest.cs" />
     <Compile Include="ModelTests\Implementations\StudentTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,7 +150,9 @@
       <Name>EFCodeFirst</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Unit Testing Metrics\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

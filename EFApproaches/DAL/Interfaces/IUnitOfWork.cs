@@ -12,6 +12,7 @@ namespace EFApproaches.DAL.Interfaces
         SchoolContext DbContext { get; set; }
         IRepository<Student> StudentRepo { get; }
         IRepository<Course> CourseRepo { get; }
+        IRepository<Teacher> TeacherRepo { get; }
         void Commit();
         void Dispose();
     }

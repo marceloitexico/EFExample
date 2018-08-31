@@ -11,9 +11,9 @@ namespace EFApproaches.DAL.Implementations
     {
         //Private members corresponding to each concrete repository
         public  Repository<Student> studentRepo;
-        
         private Repository<Enrollment> enrollmentRepo;
         private Repository<Course> courseRepo;
+        private Repository<Teacher> teacherRepo;
         private bool disposed = false;
         public SchoolContext DbContext { get; set; }
         public UnitOfWork()
@@ -61,6 +61,19 @@ namespace EFApproaches.DAL.Implementations
                     courseRepo = new Repository<Course>(DbContext);
                 }
                 return courseRepo;
+            }
+        }
+
+        //Accessor for private teacher repository, creates repository if null
+        public IRepository<Teacher> TeacherRepo
+        {
+            get
+            {
+                if (teacherRepo == null)
+                {
+                    teacherRepo = new Repository<Teacher>(DbContext);
+                }
+                return teacherRepo;
             }
         }
 

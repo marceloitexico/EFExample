@@ -34,7 +34,7 @@ namespace EFApproaches.DAL.Entities
 
         public string getFullName()
         {
-            return FirstMidName + " " + LastName;
+            return FirstMidName + " " + LastName; 
         }
     }
 }

@@ -40,22 +40,53 @@ namespace EFApproaches.DAL.Implementations
             };
             courses.ForEach(s => context.Courses.Add(s));
             context.SaveChanges();
-            var enrollments = new List<Enrollment>
+
+            context.Enrollments.Add(new Enrollment{ StudentID = 1,CourseID = 1050,Grade = Grade.A});
+            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 1050, Grade = Grade.A });
+            context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C});
+            context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B});
+            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B});
+            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=3141,Grade=Grade.F});
+            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F});
+            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 1050 });
+            context.Enrollments.Add(new Enrollment{StudentID=4,CourseID=1050});
+            context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 4022, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C});
+            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 1045 });
+            context.Enrollments.Add(new Enrollment { StudentID = 7, CourseID = 3141, Grade = Grade.A });
+            
+            //enrollments.ForEach(s => context.Enrollments.Add(s));
+            context.SaveChanges();
+
+            var teachers = new List<Teacher>
             {
-            new Enrollment{StudentID=1,CourseID=1050,Grade=Grade.A},
-            new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C},
-            new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B},
-            new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B},
-            new Enrollment{StudentID=2,CourseID=3141,Grade=Grade.F},
-            new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F},
-            new Enrollment{StudentID=3,CourseID=1050},
-            new Enrollment{StudentID=4,CourseID=1050,},
-            new Enrollment{StudentID=4,CourseID=4022,Grade=Grade.F},
-            new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C},
-            new Enrollment{StudentID=6,CourseID=1045},
-            new Enrollment{StudentID=7,CourseID=3141,Grade=Grade.A},
+                new Teacher {FirstMidName="Peterson",LastName="Mary",EmailAddress="mpeterson@school.com"},
+                new Teacher {FirstMidName="Manning",LastName="Brian",EmailAddress="bmanning@school.com"},
+                new Teacher {FirstMidName="Carr",LastName="Katherine",EmailAddress="ckarr@school.com"},
+                new Teacher {FirstMidName="Springer",LastName="Wanda",EmailAddress="wspringer@school.com"},
+                new Teacher {FirstMidName="Black",LastName="Kelly",EmailAddress="kblack@school.com"}
             };
-            enrollments.ForEach(s => context.Enrollments.Add(s));
+            teachers.ForEach(t => context.Teachers.Add(t));
+            context.SaveChanges();
+
+            var teacherCourses = new List<TeacherCourse>
+            {
+                new TeacherCourse {TeacherID = 1, CourseID = 3141 },
+                new TeacherCourse {TeacherID = 1, CourseID = 1045 },
+                new TeacherCourse {TeacherID = 2, CourseID = 4041 },
+                new TeacherCourse {TeacherID = 2, CourseID = 4022 },
+                new TeacherCourse {TeacherID = 2, CourseID = 1050 },
+                new TeacherCourse {TeacherID = 3, CourseID = 2021 },
+                new TeacherCourse {TeacherID = 3, CourseID = 1045 },
+                new TeacherCourse {TeacherID = 3, CourseID = 3141 },
+                new TeacherCourse {TeacherID = 3, CourseID = 1050 },
+                new TeacherCourse {TeacherID = 4, CourseID = 4041 },
+                new TeacherCourse {TeacherID = 4, CourseID = 4022 },
+                new TeacherCourse {TeacherID = 4, CourseID = 1050 },
+                new TeacherCourse {TeacherID = 4, CourseID = 2021 },
+                new TeacherCourse {TeacherID = 4, CourseID = 1045 }
+            };
+            teacherCourses.ForEach(tc => context.TeacherCourses.Add(tc));
             context.SaveChanges();
         }
     }

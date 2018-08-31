@@ -37,5 +37,18 @@ namespace EFCodeFirstTest.Helpers
             };
             return data;
         }
+
+        public static List<Teacher> GenerateTeachersList()
+        {
+            var data = new List<Teacher>
+            {
+                new Teacher {ID = 1, FirstMidName = "Diana", LastName = "Golson", EmailAddress  = "dgolson@domain.com"},
+                new Teacher {ID = 2, FirstMidName = "Natisha", LastName = "Gracey", EmailAddress  = "ngracey@domain.com"},
+                new Teacher {ID = 3, FirstMidName = "Marvella", LastName = "Shapiro", EmailAddress  = "mshapiro@domain.com"},
+                new Teacher {ID = 4, FirstMidName = "Damaris", LastName = "Foshee", EmailAddress  = "dfoshee@domain.com" },
+                new Teacher {ID = 5, FirstMidName = "Selene", LastName = "Frazier", EmailAddress  = "sfrazier@domain.com" }
+            };
+            return data;
+        }
     }
 }
