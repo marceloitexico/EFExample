@@ -14,7 +14,7 @@ namespace EFApproaches.DAL.Implementations
     {
         protected override void Seed(SchoolContext context)
         {
-            var students = new List<Student>
+           var students = new List<Student>
             {
             new Student{FirstMidName="Carson",LastName="Alexander",  EnrollmentDate=DateTime.Parse("2005-09-01"),EmailAddress="carson@school.com"},
             new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01"),EmailAddress="meredith@school.com"},
@@ -42,7 +42,7 @@ namespace EFApproaches.DAL.Implementations
             context.SaveChanges();
 
             context.Enrollments.Add(new Enrollment{ StudentID = 1,CourseID = 1050,Grade = Grade.A});
-            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 1050, Grade = Grade.A });
+            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 2021, Grade = Grade.A });
             context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C});
             context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B});
             context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B});

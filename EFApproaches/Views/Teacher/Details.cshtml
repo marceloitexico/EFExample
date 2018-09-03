@@ -59,6 +59,32 @@
             @Html.DisplayFor(model => model.Age)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Courses)
+        </dt>
+
+        <dd>
+            <!--Enrollments information-->
+            <table class="table">
+                <tr>
+                    <th>Course Title</th>
+                    <th>Hours/Week</th>
+                </tr>
+                @foreach (var item in Model.Courses)
+                {
+                    <tr>
+                        <td >
+                            @Html.DisplayFor(modelItem => item.Course.Title)  
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AsignedHoursForCourse)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </dd>
+
     </dl>
 </div>
 <p>

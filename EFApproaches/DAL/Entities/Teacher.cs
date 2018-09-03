@@ -13,7 +13,6 @@ namespace EFApproaches.DAL.Entities
         public string FirstMidName { get; set; }
         [Required]
         public string LastName { get; set; }
-        [Required]
         public string Title { get; set; }
         public string EmailAddress { get; set; }
         public string FullName { get { return FirstMidName + " " + LastName; } }

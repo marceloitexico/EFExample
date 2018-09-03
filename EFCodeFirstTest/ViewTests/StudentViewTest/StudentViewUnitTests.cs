@@ -85,5 +85,20 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             Assert.That(firstMidNameValue, Is.EqualTo("John"));
 
         }
+
+        /*
+        public void failedTestByDisplayNameFor()
+        {
+            var sut = new _Views_Student_Index_cshtml();
+            List<Student> indexModel = DataHelper.GenerateStudentsList();
+            var indexModelCount = indexModel.Count;
+            for (int stdCount = 0 ; stdCount < (indexModelCount - 1); stdCount++)
+            {
+                indexModel.RemoveAt(0);
+            }
+            HtmlDocument html = sut.RenderAsHtml(indexModel);
+            var firstMidNameValue = html.GetElementbyId("firstMidNameValue").InnerText;
+            Assert.That(firstMidNameValue, Is.EqualTo("John"));
+        }*/
     }
 }

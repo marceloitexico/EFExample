@@ -24,7 +24,7 @@ namespace EFApproaches.DAL.Implementations
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //If you didn't do this, the generated tables in the database would be named Students, Courses, and Enrollments
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }

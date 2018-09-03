@@ -98,20 +98,20 @@ namespace EFApproaches.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditPost(int? id)
         {
-            Teacher TeacherToUpdate = null;
+            Teacher teacherToUpdate = null;
             try
             {
                 if (id == null)
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
                 }
-                TeacherToUpdate = unitOfWork.TeacherRepo.GetById(id);
-                if (null == TeacherToUpdate)
+                teacherToUpdate = unitOfWork.TeacherRepo.GetById(id);
+                if (null == teacherToUpdate)
                 {
                     ModelState.AddModelError("NullModelError", "The Teacher you tried to update was not found");
-                    TeacherToUpdate = new Teacher();
+                    teacherToUpdate = new Teacher();
                 }
-                if (TryUpdateModel(TeacherToUpdate, "",
+                if (TryUpdateModel(teacherToUpdate, "",
                     new string[] { "LastName", "FirstMidName", "Title", "EmailAddress" }))
                 {
                     unitOfWork.Commit();
@@ -124,7 +124,7 @@ namespace EFApproaches.Controllers
                 ModelState.AddModelError("SaveChangesExceptionError", "Unable to save changes. " + ex.Message);
                 return View(new Teacher());
             }
-            return View(TeacherToUpdate);
+            return View(teacherToUpdate);
         }
 
         // GET: Teachers/Delete/5

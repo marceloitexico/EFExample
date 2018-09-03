@@ -47,7 +47,7 @@ namespace ASP
             
             #line 4 "..\..\Views\Student\Index.cshtml"
   
-    ViewBag.Title = "Index";
+    ViewBag.Title = "List of Students";
 
             
             #line default

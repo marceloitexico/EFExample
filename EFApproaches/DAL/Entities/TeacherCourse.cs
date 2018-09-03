@@ -10,7 +10,7 @@ namespace EFApproaches.DAL.Entities
         public int ID { get; set; }
         public int CourseID { get; set; }
         public int TeacherID { get; set; }
-
+        public int AsignedHoursForCourse { get; set; }
         public virtual Course Course { get; set; }
         public virtual Teacher Teacher { get; set; }
     }
