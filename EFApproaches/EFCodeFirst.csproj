@@ -248,6 +248,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Teacher\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -326,7 +331,10 @@
     <Content Include="Views\Course\Details.cshtml" />
     <Content Include="Views\Course\Edit.cshtml" />
     <Content Include="Views\Course\Delete.cshtml" />
-    <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
     <Content Include="Views\Teacher\Create.cshtml" />
     <Content Include="Views\Teacher\Details.cshtml" />
     <Content Include="Views\Teacher\Edit.cshtml" />

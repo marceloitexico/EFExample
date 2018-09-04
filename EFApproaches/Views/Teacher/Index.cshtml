@@ -6,7 +6,7 @@
 }
 
 <h2>Index</h2>
-
+<span id="viewBagMsgContainer">@ViewBag.Message</span>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -33,19 +33,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstMidName)
+            <span class="firstNameValue">@item.FirstMidName</span>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            <span class="lastNameValue">@item.LastName</span>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
+            <span class="titleValue">@item.Title</span>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EmailAddress)
+            <span class="emailAddressValue">@item.EmailAddress</span>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FullName)
+            <span class="fullNameValue">@item.FullName</span>  
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
@@ -54,5 +54,8 @@
         </td>
     </tr>
 }
-
 </table>
+<div>
+    Full time teachers:<span>@ViewBag.FullTimeTeachers</span> <br />
+    Part time teachers:<span></span> @ViewBag.PartTimeTeachers </span>
+</div>

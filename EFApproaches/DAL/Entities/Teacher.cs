@@ -17,6 +17,7 @@ namespace EFApproaches.DAL.Entities
         public string EmailAddress { get; set; }
         public string FullName { get { return FirstMidName + " " + LastName; } }
         public int Age { get; }
+        public int HoursPerWeek { get; set; }
         public virtual ICollection<TeacherCourse> Courses { get; set; }
         public Teacher() { }
         public Teacher(string firstMidName, string lastName)
