@@ -13,10 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstMidName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.FullName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -25,7 +22,7 @@
             @Html.DisplayNameFor(model => model.EmailAddress)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FullName)
+            @Html.DisplayNameFor(model => model.HoursPerWeek)
         </th>
         <th></th>
     </tr>
@@ -33,10 +30,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <span class="firstNameValue">@item.FirstMidName</span>
-        </td>
-        <td>
-            <span class="lastNameValue">@item.LastName</span>
+            <span class="fullNameValue">@item.FullName</span>
         </td>
         <td>
             <span class="titleValue">@item.Title</span>
@@ -45,17 +39,20 @@
             <span class="emailAddressValue">@item.EmailAddress</span>
         </td>
         <td>
-            <span class="fullNameValue">@item.FullName</span>  
+            <span class="emailAddressValue">@item.HoursPerWeek</span>
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editTeacher" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "detailsTeacher" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "deleteTeacher" })
         </td>
     </tr>
 }
 </table>
 <div>
-    Full time teachers:<span>@ViewBag.FullTimeTeachers</span> <br />
-    Part time teachers:<span></span> @ViewBag.PartTimeTeachers </span>
+    <b>Minimum hours required to be a Full Time teacher:  </b> <span>@ViewBag.MinimumHoursForFullTime</span>
+    <br />
+    <b>Full time teachers:  </b><span id="fullTimeTeachersContainer">@ViewBag.FullTimeTeachers</span>
+    <br />
+    <b>Part time teachers:  </b><span id="partTimeTeachersContainer">@ViewBag.PartTimeTeachers</span>
 </div>

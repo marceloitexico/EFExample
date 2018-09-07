@@ -81,7 +81,7 @@ WriteLiteral("            ");
 
             
             #line 16 "..\..\Views\Teacher\Index.cshtml"
-       Write(Html.DisplayNameFor(model => model.FirstMidName));
+       Write(Html.DisplayNameFor(model => model.FullName));
 
             
             #line default
@@ -92,17 +92,6 @@ WriteLiteral("            ");
 
             
             #line 19 "..\..\Views\Teacher\Index.cshtml"
-       Write(Html.DisplayNameFor(model => model.LastName));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n        </th>\r\n        <th>\r\n");
-
-WriteLiteral("            ");
-
-            
-            #line 22 "..\..\Views\Teacher\Index.cshtml"
        Write(Html.DisplayNameFor(model => model.Title));
 
             
@@ -113,7 +102,7 @@ WriteLiteral("\r\n        </th>\r\n        <th>\r\n");
 WriteLiteral("            ");
 
             
-            #line 25 "..\..\Views\Teacher\Index.cshtml"
+            #line 22 "..\..\Views\Teacher\Index.cshtml"
        Write(Html.DisplayNameFor(model => model.EmailAddress));
 
             
@@ -124,8 +113,8 @@ WriteLiteral("\r\n        </th>\r\n        <th>\r\n");
 WriteLiteral("            ");
 
             
-            #line 28 "..\..\Views\Teacher\Index.cshtml"
-       Write(Html.DisplayNameFor(model => model.FullName));
+            #line 25 "..\..\Views\Teacher\Index.cshtml"
+       Write(Html.DisplayNameFor(model => model.HoursPerWeek));
 
             
             #line default
@@ -133,7 +122,7 @@ WriteLiteral("            ");
 WriteLiteral("\r\n        </th>\r\n        <th></th>\r\n    </tr>\r\n\r\n");
 
             
-            #line 33 "..\..\Views\Teacher\Index.cshtml"
+            #line 30 "..\..\Views\Teacher\Index.cshtml"
  foreach (var item in Model) {
 
             
@@ -141,26 +130,13 @@ WriteLiteral("\r\n        </th>\r\n        <th></th>\r\n    </tr>\r\n\r\n");
             #line hidden
 WriteLiteral("    <tr>\r\n        <td>\r\n            <span");
 
-WriteLiteral(" class=\"firstNameValue\"");
+WriteLiteral(" class=\"fullNameValue\"");
 
 WriteLiteral(">");
 
             
-            #line 36 "..\..\Views\Teacher\Index.cshtml"
-                                    Write(item.FirstMidName);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span>\r\n        </td>\r\n        <td>\r\n            <span");
-
-WriteLiteral(" class=\"lastNameValue\"");
-
-WriteLiteral(">");
-
-            
-            #line 39 "..\..\Views\Teacher\Index.cshtml"
-                                   Write(item.LastName);
+            #line 33 "..\..\Views\Teacher\Index.cshtml"
+                                   Write(item.FullName);
 
             
             #line default
@@ -172,7 +148,7 @@ WriteLiteral(" class=\"titleValue\"");
 WriteLiteral(">");
 
             
-            #line 42 "..\..\Views\Teacher\Index.cshtml"
+            #line 36 "..\..\Views\Teacher\Index.cshtml"
                                 Write(item.Title);
 
             
@@ -185,7 +161,7 @@ WriteLiteral(" class=\"emailAddressValue\"");
 WriteLiteral(">");
 
             
-            #line 45 "..\..\Views\Teacher\Index.cshtml"
+            #line 39 "..\..\Views\Teacher\Index.cshtml"
                                        Write(item.EmailAddress);
 
             
@@ -193,35 +169,24 @@ WriteLiteral(">");
             #line hidden
 WriteLiteral("</span>\r\n        </td>\r\n        <td>\r\n            <span");
 
-WriteLiteral(" class=\"fullNameValue\"");
+WriteLiteral(" class=\"emailAddressValue\"");
 
 WriteLiteral(">");
 
             
-            #line 48 "..\..\Views\Teacher\Index.cshtml"
-                                   Write(item.FullName);
+            #line 42 "..\..\Views\Teacher\Index.cshtml"
+                                       Write(item.HoursPerWeek);
 
             
             #line default
             #line hidden
-WriteLiteral("</span>  \r\n        </td>\r\n        <td>\r\n");
+WriteLiteral("</span>\r\n        </td>\r\n        <td>\r\n");
 
 WriteLiteral("            ");
 
             
-            #line 51 "..\..\Views\Teacher\Index.cshtml"
-       Write(Html.ActionLink("Edit", "Edit", new { id=item.ID }));
-
-            
-            #line default
-            #line hidden
-WriteLiteral(" |\r\n");
-
-WriteLiteral("            ");
-
-            
-            #line 52 "..\..\Views\Teacher\Index.cshtml"
-       Write(Html.ActionLink("Details", "Details", new { id=item.ID }));
+            #line 45 "..\..\Views\Teacher\Index.cshtml"
+       Write(Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editTeacher" }));
 
             
             #line default
@@ -231,8 +196,19 @@ WriteLiteral(" |\r\n");
 WriteLiteral("            ");
 
             
-            #line 53 "..\..\Views\Teacher\Index.cshtml"
-       Write(Html.ActionLink("Delete", "Delete", new { id=item.ID }));
+            #line 46 "..\..\Views\Teacher\Index.cshtml"
+       Write(Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "detailsTeacher" }));
+
+            
+            #line default
+            #line hidden
+WriteLiteral(" |\r\n");
+
+WriteLiteral("            ");
+
+            
+            #line 47 "..\..\Views\Teacher\Index.cshtml"
+       Write(Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "deleteTeacher" }));
 
             
             #line default
@@ -240,31 +216,49 @@ WriteLiteral("            ");
 WriteLiteral("\r\n        </td>\r\n    </tr>\r\n");
 
             
-            #line 56 "..\..\Views\Teacher\Index.cshtml"
+            #line 50 "..\..\Views\Teacher\Index.cshtml"
 }
 
             
             #line default
             #line hidden
-WriteLiteral("</table>\r\n<div>\r\n    Full time teachers:<span>");
+WriteLiteral("</table>\r\n<div>\r\n    <b>Minimum hours required to be a Full Time teacher:  </b> <" +
+"span>");
 
             
-            #line 59 "..\..\Views\Teacher\Index.cshtml"
-                        Write(ViewBag.FullTimeTeachers);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span> <br />\r\n    Part time teachers:<span></span> ");
-
-            
-            #line 60 "..\..\Views\Teacher\Index.cshtml"
-                                Write(ViewBag.PartTimeTeachers);
+            #line 53 "..\..\Views\Teacher\Index.cshtml"
+                                                                Write(ViewBag.MinimumHoursForFullTime);
 
             
             #line default
             #line hidden
-WriteLiteral(" </span>\r\n</div>\r\n");
+WriteLiteral("</span>\r\n    <br />\r\n    <b>Full time teachers:  </b><span");
+
+WriteLiteral(" id=\"fullTimeTeachersContainer\"");
+
+WriteLiteral(">");
+
+            
+            #line 55 "..\..\Views\Teacher\Index.cshtml"
+                                                                Write(ViewBag.FullTimeTeachers);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span>\r\n    <br />\r\n    <b>Part time teachers:  </b><span");
+
+WriteLiteral(" id=\"partTimeTeachersContainer\"");
+
+WriteLiteral(">");
+
+            
+            #line 57 "..\..\Views\Teacher\Index.cshtml"
+                                                                Write(ViewBag.PartTimeTeachers);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span>\r\n</div>\r\n");
 
         }
     }

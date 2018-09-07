@@ -60,11 +60,13 @@ namespace EFApproaches.DAL.Implementations
 
             var teachers = new List<Teacher>
             {
-                new Teacher {FirstMidName="Peterson",LastName="Mary",EmailAddress="mpeterson@school.com"},
-                new Teacher {FirstMidName="Manning",LastName="Brian",EmailAddress="bmanning@school.com"},
-                new Teacher {FirstMidName="Carr",LastName="Katherine",EmailAddress="ckarr@school.com"},
-                new Teacher {FirstMidName="Springer",LastName="Wanda",EmailAddress="wspringer@school.com"},
-                new Teacher {FirstMidName="Black",LastName="Kelly",EmailAddress="kblack@school.com"}
+                new Teacher {FirstMidName="Peterson",LastName="Mary",EmailAddress="mpeterson@school.com", Title= "Doctor of Laws", HoursPerWeek =  20},
+                new Teacher {FirstMidName="Manning",LastName="Brian",EmailAddress="bmanning@school.com", Title= "Doctor of Pharmacy", HoursPerWeek =  10},
+                new Teacher {FirstMidName="Carr",LastName="Katherine",EmailAddress="ckarr@school.com", Title= "Licentiate of theology", HoursPerWeek =  25},
+                new Teacher {FirstMidName="Springer",LastName="Wanda",EmailAddress="wspringer@school.com", Title= "Doctor of Philosophy", HoursPerWeek =  15},
+                new Teacher {FirstMidName="Black",LastName="Kelly",EmailAddress="kblack@school.com", Title= "Doctor of Natural Sciences", HoursPerWeek =  30},
+                new Teacher {FirstMidName="Johnson",LastName="Arianna",EmailAddress="ajohnson@school.com", Title= "Doctor of Medicine", HoursPerWeek =  19},
+                new Teacher {FirstMidName="Kramer",LastName="John",EmailAddress="kblack@school.com", Title= "Veterinary Doctor", HoursPerWeek =  28}
             };
             teachers.ForEach(t => context.Teachers.Add(t));
             context.SaveChanges();
@@ -84,7 +86,23 @@ namespace EFApproaches.DAL.Implementations
                 new TeacherCourse {TeacherID = 4, CourseID = 4022 },
                 new TeacherCourse {TeacherID = 4, CourseID = 1050 },
                 new TeacherCourse {TeacherID = 4, CourseID = 2021 },
-                new TeacherCourse {TeacherID = 4, CourseID = 1045 }
+                new TeacherCourse {TeacherID = 4, CourseID = 1045 },
+                new TeacherCourse {TeacherID = 5, CourseID = 4041 },
+                new TeacherCourse {TeacherID = 5, CourseID = 4022 },
+                new TeacherCourse {TeacherID = 5, CourseID = 1050 },
+                new TeacherCourse {TeacherID = 5, CourseID = 2021 },
+                new TeacherCourse {TeacherID = 6, CourseID = 1045 },
+                new TeacherCourse {TeacherID = 6, CourseID = 4041 },
+                new TeacherCourse {TeacherID = 6, CourseID = 4022 },
+                new TeacherCourse {TeacherID = 6, CourseID = 1050 },
+                new TeacherCourse {TeacherID = 6, CourseID = 2021 },
+                new TeacherCourse {TeacherID = 7, CourseID = 1050 },
+                new TeacherCourse {TeacherID = 7, CourseID = 4022 },
+                new TeacherCourse {TeacherID = 7, CourseID = 4041 },
+                new TeacherCourse {TeacherID = 7, CourseID = 1045 },
+                new TeacherCourse {TeacherID = 7, CourseID = 3141 },
+                new TeacherCourse {TeacherID = 7, CourseID = 2021 },
+                new TeacherCourse {TeacherID = 7, CourseID = 2042 },
             };
             teacherCourses.ForEach(tc => context.TeacherCourses.Add(tc));
             context.SaveChanges();

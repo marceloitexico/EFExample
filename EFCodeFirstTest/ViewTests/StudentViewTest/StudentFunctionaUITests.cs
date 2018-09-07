@@ -12,7 +12,7 @@ using TestStack.Seleno.PageObjects.Locators;
 namespace EFCodeFirstTest.ViewTests.StudentViewTest
 {
     [TestFixture]
-    public class StudentFunctionaUITests
+    public class StudentFunctionaUITests : FunctionalUITestsBase
     {
         private static int standardTimeBetweenPagesMS = 4000;
         /// <summary>
@@ -21,10 +21,6 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
         [Test]
         public void ShouldCreateThenDeleteANewStudent()
         {
-            OpenQA.Selenium.IWebElement newStudentIDElement = null;
-            OpenQA.Selenium.IWebElement deleteStudentLink = null;
-            OpenQA.Selenium.IWebElement editStudentLink = null;
-            OpenQA.Selenium.IWebElement detailsStudentLink = null;
             //Create Student
             Student createdStudent = CreateStudent();
             string randomFirstMidName = createdStudent.FirstMidName;

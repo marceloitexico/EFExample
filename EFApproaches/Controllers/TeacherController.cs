@@ -13,17 +13,23 @@ namespace EFApproaches.Controllers
     {
         #region private members
         private static byte inexistentTeacherID = 0;
+        private static int tempMinimumHoursForFullTime = 20;
         #endregion private members
         #region constructor
         public TeacherController() { }
         public TeacherController(IUnitOfWork unitOfWork) : base(unitOfWork) { }
         #endregion constructor
-
         // GET: Teachers
         public ActionResult Index()
         {
+            int fullTimeTeachers = unitOfWork.TeacherRepo.DataSet.Where(t => t.HoursPerWeek >= tempMinimumHoursForFullTime).Count();
+            int partTimeTeachers = unitOfWork.TeacherRepo.DataSet.Where(t => t.HoursPerWeek < tempMinimumHoursForFullTime).Count();
+            ViewBag.FullTimeTeachers = fullTimeTeachers;
+            ViewBag.PartTimeTeachers = partTimeTeachers;
+            ViewBag.MinimumHoursForFullTime = tempMinimumHoursForFullTime;
             return View(unitOfWork.TeacherRepo.DataSet);
         }
+
         #region CRUD Actions
 
         // GET: Teachers/Details/5
@@ -53,7 +59,7 @@ namespace EFApproaches.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LastName,FirstMidName, Title, EmailAddress")] Teacher Teacher)
+        public ActionResult Create([Bind(Include = "LastName,FirstMidName, Title, EmailAddress, HoursPerWeek")] Teacher Teacher)
         {
             try
             {
@@ -112,7 +118,7 @@ namespace EFApproaches.Controllers
                     teacherToUpdate = new Teacher();
                 }
                 if (TryUpdateModel(teacherToUpdate, "",
-                    new string[] { "LastName", "FirstMidName", "Title", "EmailAddress" }))
+                    new string[] { "LastName", "FirstMidName", "Title", "EmailAddress", "HoursPerWeek" }))
                 {
                     unitOfWork.Commit();
                     return RedirectToAction("Index");

@@ -25,5 +25,10 @@ namespace EFApproaches.Controllers
         {
             unitOfWork = unitofwork;
         }
+        delegate bool isMoreThanOne(int number);
+        public void Nf()
+        {
+            
+        }
     }
 }

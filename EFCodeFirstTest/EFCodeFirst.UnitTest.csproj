@@ -137,8 +137,10 @@
     <Compile Include="ModelTests\Interfaces\IModelTest.cs" />
     <Compile Include="ModelTests\Implementations\StudentTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewTests\FunctionalUITestsBase.cs" />
     <Compile Include="ViewTests\StudentViewTest\StudentFunctionaUITests.cs" />
     <Compile Include="ViewTests\StudentViewTest\StudentViewUnitTests.cs" />
+    <Compile Include="ViewTests\TeacherViewTest\TeacherFunctionaUITests.cs" />
     <Compile Include="ViewTests\TeacherViewTest\TeacherViewUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>

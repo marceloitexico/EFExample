@@ -12,19 +12,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.FirstMidName)
+            @Html.DisplayNameFor(model => model.FullName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FirstMidName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
+            <span id="fullNameSpan"> @Model.FullName </span>
         </dd>
 
         <dt>
@@ -32,7 +24,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Title)
+            <span id="titleSpan"> @Model.Title </span>
         </dd>
 
         <dt>
@@ -40,23 +32,15 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EmailAddress)
+            <span id="emailAddressSpan"> @Model.EmailAddress </span>
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FullName)
+            @Html.DisplayNameFor(model => model.HoursPerWeek)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
+            <span id="hoursPerWeekSpan"> @Model.HoursPerWeek.ToString() </span>
         </dd>
 
         <dt>
@@ -73,8 +57,8 @@
                 @foreach (var item in Model.Courses)
                 {
                     <tr>
-                        <td >
-                            @Html.DisplayFor(modelItem => item.Course.Title)  
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Course.Title)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.AsignedHoursForCourse)
@@ -89,5 +73,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new { id = "backToListLink" })
 </p>
