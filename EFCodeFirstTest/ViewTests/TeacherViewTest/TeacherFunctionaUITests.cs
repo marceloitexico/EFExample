@@ -14,9 +14,6 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
     [TestFixture]
     public class TeacherFunctionaUITests : FunctionalUITestsBase
     {
-        private static int standardTimeBetweenPagesMS = 2000;
-        private static int standardTimeToSeeData = 200;
-
         private OpenQA.Selenium.IWebElement newTeacherIDElement = null;
         private OpenQA.Selenium.IWebElement deleteTeacherLink = null;
         private OpenQA.Selenium.IWebElement editTeacherLink = null;

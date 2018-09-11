@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace EFCodeFirstTest.ViewTests
 {
-    public class FunctionalUITestsBase
+    public abstract class FunctionalUITestsBase
     {
-        protected internal OpenQA.Selenium.IWebElement newStudentIDElement = null;
-        protected internal OpenQA.Selenium.IWebElement deleteStudentLink = null;
-        protected internal OpenQA.Selenium.IWebElement editStudentLink = null;
-        protected internal OpenQA.Selenium.IWebElement detailsStudentLink = null;
+        protected internal static int standardTimeBetweenPagesMS = 2000;
+        protected internal static int standardTimeToSeeData = 200;
     }
 }

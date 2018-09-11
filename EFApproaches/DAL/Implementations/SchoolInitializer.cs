@@ -32,39 +32,39 @@ namespace EFApproaches.DAL.Implementations
             context.SaveChanges();
             var courses = new List<Course>
             {
-            new Course{CourseID=1050,Title="Chemistry",Credits=3,},
-            new Course{CourseID=4022,Title="Microeconomics",Credits=3,},
-            new Course{CourseID=4041,Title="Macroeconomics",Credits=3,},
-            new Course{CourseID=1045,Title="Calculus",Credits=4,},
-            new Course{CourseID=3141,Title="Trigonometry",Credits=4,},
-            new Course{CourseID=2021,Title="Composition",Credits=3,},
-            new Course{CourseID=2042,Title="Literature",Credits=4,}
+            new Course{Title="Chemistry",Credits=3,},
+            new Course{Title="Microeconomics",Credits=3,},
+            new Course{Title="Macroeconomics",Credits=3,},
+            new Course{Title="Calculus",Credits=4,},
+            new Course{Title="Trigonometry",Credits=4,},
+            new Course{Title="Composition",Credits=3,},
+            new Course{Title="Literature",Credits=4,}
             };
             courses.ForEach(s => context.Courses.Add(s));
             context.SaveChanges();
 
-            context.Enrollments.Add(new Enrollment{ StudentID = 1,CourseID = 1050,Grade = Grade.A});
-            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 2021, Grade = Grade.A });
-            context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C});
-            context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B});
-            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B});
-            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F});
-            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 1050, Grade = Grade.C });
-            context.Enrollments.Add(new Enrollment{StudentID=4,CourseID=1050, Grade = Grade.B });
-            context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 4022, Grade = Grade.F });
-            context.Enrollments.Add(new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C});
-            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 1045, Grade = Grade.C });
+            context.Enrollments.Add(new Enrollment{ StudentID = 1,CourseID = 1,Grade = Grade.A});
+            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 6, Grade = Grade.A });
+            context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=2,Grade=Grade.C});
+            context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=3,Grade=Grade.B});
+            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=4,Grade=Grade.B});
+            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=6,Grade=Grade.F});
+            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 1, Grade = Grade.C });
+            context.Enrollments.Add(new Enrollment{StudentID=4,CourseID=1, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 2, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment{StudentID=5,CourseID=3,Grade=Grade.C});
+            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 4, Grade = Grade.C });
 
-            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 3141, Grade = Grade.B });
-            context.Enrollments.Add(new Enrollment { StudentID = 2, CourseID = 3141, Grade = Grade.F });
-            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 3141, Grade = Grade.B });
-            context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 3141, Grade = Grade.F });
-            context.Enrollments.Add(new Enrollment { StudentID = 5, CourseID = 3141, Grade = Grade.A });
-            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 3141, Grade = Grade.F });
-            context.Enrollments.Add(new Enrollment { StudentID = 7, CourseID = 3141, Grade = Grade.A });
-            context.Enrollments.Add(new Enrollment { StudentID = 8, CourseID = 3141, Grade = Grade.B });
-            context.Enrollments.Add(new Enrollment { StudentID = 9, CourseID = 3141, Grade = Grade.F });
-            context.Enrollments.Add(new Enrollment { StudentID = 10, CourseID = 3141, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 5, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 2, CourseID = 5, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 5, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 5, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 5, CourseID = 5, Grade = Grade.A });
+            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 5, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 7, CourseID = 5, Grade = Grade.A });
+            context.Enrollments.Add(new Enrollment { StudentID = 8, CourseID = 5, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 9, CourseID = 5, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 10, CourseID = 5, Grade = Grade.F });
 
             //enrollments.ForEach(s => context.Enrollments.Add(s));
             context.SaveChanges();
@@ -84,36 +84,36 @@ namespace EFApproaches.DAL.Implementations
 
             var teacherCourses = new List<TeacherCourse>
             {
-                new TeacherCourse {TeacherID = 1, CourseID = 3141 },
-                new TeacherCourse {TeacherID = 1, CourseID = 1045 },
-                new TeacherCourse {TeacherID = 2, CourseID = 4041 },
-                new TeacherCourse {TeacherID = 2, CourseID = 4022 },
-                new TeacherCourse {TeacherID = 2, CourseID = 1050 },
-                new TeacherCourse {TeacherID = 3, CourseID = 2021 },
-                new TeacherCourse {TeacherID = 3, CourseID = 1045 },
-                new TeacherCourse {TeacherID = 3, CourseID = 3141 },
-                new TeacherCourse {TeacherID = 3, CourseID = 1050 },
-                new TeacherCourse {TeacherID = 4, CourseID = 4041 },
-                new TeacherCourse {TeacherID = 4, CourseID = 4022 },
-                new TeacherCourse {TeacherID = 4, CourseID = 1050 },
-                new TeacherCourse {TeacherID = 4, CourseID = 2021 },
-                new TeacherCourse {TeacherID = 4, CourseID = 1045 },
-                new TeacherCourse {TeacherID = 5, CourseID = 4041 },
-                new TeacherCourse {TeacherID = 5, CourseID = 4022 },
-                new TeacherCourse {TeacherID = 5, CourseID = 1050 },
-                new TeacherCourse {TeacherID = 5, CourseID = 2021 },
-                new TeacherCourse {TeacherID = 6, CourseID = 1045 },
-                new TeacherCourse {TeacherID = 6, CourseID = 4041 },
-                new TeacherCourse {TeacherID = 6, CourseID = 4022 },
-                new TeacherCourse {TeacherID = 6, CourseID = 1050 },
-                new TeacherCourse {TeacherID = 6, CourseID = 2021 },
-                new TeacherCourse {TeacherID = 7, CourseID = 1050 },
-                new TeacherCourse {TeacherID = 7, CourseID = 4022 },
-                new TeacherCourse {TeacherID = 7, CourseID = 4041 },
-                new TeacherCourse {TeacherID = 7, CourseID = 1045 },
-                new TeacherCourse {TeacherID = 7, CourseID = 3141 },
-                new TeacherCourse {TeacherID = 7, CourseID = 2021 },
-                new TeacherCourse {TeacherID = 7, CourseID = 2042 },
+                new TeacherCourse {TeacherID = 1, CourseID = 5 },
+                new TeacherCourse {TeacherID = 1, CourseID = 4 },
+                new TeacherCourse {TeacherID = 2, CourseID = 3 },
+                new TeacherCourse {TeacherID = 2, CourseID = 2 },
+                new TeacherCourse {TeacherID = 2, CourseID = 1 },
+                new TeacherCourse {TeacherID = 3, CourseID = 6 },
+                new TeacherCourse {TeacherID = 3, CourseID = 4 },
+                new TeacherCourse {TeacherID = 3, CourseID = 5 },
+                new TeacherCourse {TeacherID = 3, CourseID = 1 },
+                new TeacherCourse {TeacherID = 4, CourseID = 3 },
+                new TeacherCourse {TeacherID = 4, CourseID = 2 },
+                new TeacherCourse {TeacherID = 4, CourseID = 1 },
+                new TeacherCourse {TeacherID = 4, CourseID = 6 },
+                new TeacherCourse {TeacherID = 4, CourseID = 4 },
+                new TeacherCourse {TeacherID = 5, CourseID = 3 },
+                new TeacherCourse {TeacherID = 5, CourseID = 2 },
+                new TeacherCourse {TeacherID = 5, CourseID = 1 },
+                new TeacherCourse {TeacherID = 5, CourseID = 6 },
+                new TeacherCourse {TeacherID = 6, CourseID = 4 },
+                new TeacherCourse {TeacherID = 6, CourseID = 3 },
+                new TeacherCourse {TeacherID = 6, CourseID = 2 },
+                new TeacherCourse {TeacherID = 6, CourseID = 1 },
+                new TeacherCourse {TeacherID = 6, CourseID = 6 },
+                new TeacherCourse {TeacherID = 7, CourseID = 1 },
+                new TeacherCourse {TeacherID = 7, CourseID = 2 },
+                new TeacherCourse {TeacherID = 7, CourseID = 3 },
+                new TeacherCourse {TeacherID = 7, CourseID = 4 },
+                new TeacherCourse {TeacherID = 7, CourseID = 5 },
+                new TeacherCourse {TeacherID = 7, CourseID = 6 },
+                new TeacherCourse {TeacherID = 7, CourseID = 7 },
             };
             teacherCourses.ForEach(tc => context.TeacherCourses.Add(tc));
             context.SaveChanges();

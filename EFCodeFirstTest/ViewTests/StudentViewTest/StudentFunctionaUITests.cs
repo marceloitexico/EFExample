@@ -14,7 +14,10 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
     [TestFixture]
     public class StudentFunctionaUITests : FunctionalUITestsBase
     {
-        private static int standardTimeBetweenPagesMS = 4000;
+        private OpenQA.Selenium.IWebElement newStudentIDElement = null;
+        private OpenQA.Selenium.IWebElement deleteStudentLink = null;
+        private OpenQA.Selenium.IWebElement editStudentLink = null;
+        private OpenQA.Selenium.IWebElement detailsStudentLink = null;
         /// <summary>
         ///This method creates a new student in the database (affects persistent data)
         /// </summary>
@@ -102,7 +105,7 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
             };
             newStudentData.GenerateEmailFromName(EFCodeFirstSettings.getSchoolDomain());
             captureDataIntoStudentForm(newStudentData,true);
-            Utilities.Wait(200);
+            Utilities.Wait(standardTimeToSeeData);
             var createButton = BrowserHost.Driver.FindElement(By.Id("createBtn"));
             createButton.Click();
             return newStudentData;

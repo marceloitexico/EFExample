@@ -8,7 +8,6 @@ namespace EFApproaches.DAL.Entities
 {
     public class Course
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CourseID { get; set; }
         [Required]
         public string Title { get; set; }
