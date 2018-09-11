@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<EFApproaches.DAL.Entities.Course>
 
 @{
-    ViewBag.Title = "Index";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "List of Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -24,17 +24,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
+            <span class="titleValue">@item.Title</span>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Credits)
+            <span class="creditsValue">@item.Credits</span>
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CourseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CourseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CourseID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.CourseID }, new { @class = "editCourse" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CourseID }, new { @class = "detailsCourse" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CourseID }, new { @class = "deleteCourse" })
         </td>
     </tr>
 }
-
 </table>

@@ -11,6 +11,9 @@ namespace EFApproaches.Controllers
 {
     public class CourseController : BaseController
     {
+        #region private members
+        private static int minimumStudentsToStayOpen = 10;
+        #endregion
         #region constructor
         public CourseController() { }
         public CourseController(IUnitOfWork unitOfWork) : base(unitOfWork) { }
@@ -33,6 +36,7 @@ namespace EFApproaches.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.MinimumStudentsToStayOpen = minimumStudentsToStayOpen;
             return View(course);
         }
 
@@ -57,7 +61,7 @@ namespace EFApproaches.Controllers
             catch (Exception ex)
             {
                 //Log the error (uncomment dex variable name and add a line here to write a log.
-                ModelState.AddModelError(string.Empty, "Unable to save changes. Try again, and if the problem persists see your system administrator, error: " + ex.Message);
+                ModelState.AddModelError("ExceptionError", "Unable to save changes. Try again, and if the problem persists see your system administrator, error: " + ex.Message);
             }
             //If model is not valid
             return View(course);

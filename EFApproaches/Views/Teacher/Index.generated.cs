@@ -169,7 +169,7 @@ WriteLiteral(">");
             #line hidden
 WriteLiteral("</span>\r\n        </td>\r\n        <td>\r\n            <span");
 
-WriteLiteral(" class=\"emailAddressValue\"");
+WriteLiteral(" class=\"hoursPerWeekValue\"");
 
 WriteLiteral(">");
 

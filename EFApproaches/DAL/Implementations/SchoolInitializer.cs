@@ -23,7 +23,9 @@ namespace EFApproaches.DAL.Implementations
             new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},
             new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01")},
             new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Nino",LastName="Olivetto",EnrollmentDate=DateTime.Parse("2005-09-01")}
+            new Student{FirstMidName="Shanelle",LastName="Wolak",EnrollmentDate=DateTime.Parse("2005-09-01")},
+            new Student{FirstMidName="Crystle",LastName="Bale",EnrollmentDate=DateTime.Parse("2005-08-01")},
+            new Student{FirstMidName="Ronnie",LastName="Furey",EnrollmentDate=DateTime.Parse("2005-07-01")}
             };
 
             students.ForEach(s => context.Students.Add(s));
@@ -46,15 +48,24 @@ namespace EFApproaches.DAL.Implementations
             context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C});
             context.Enrollments.Add(new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B});
             context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B});
-            context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=3141,Grade=Grade.F});
             context.Enrollments.Add(new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F});
-            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 1050 });
-            context.Enrollments.Add(new Enrollment{StudentID=4,CourseID=1050});
+            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 1050, Grade = Grade.C });
+            context.Enrollments.Add(new Enrollment{StudentID=4,CourseID=1050, Grade = Grade.B });
             context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 4022, Grade = Grade.F });
             context.Enrollments.Add(new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C});
-            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 1045 });
+            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 1045, Grade = Grade.C });
+
+            context.Enrollments.Add(new Enrollment { StudentID = 1, CourseID = 3141, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 2, CourseID = 3141, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 3, CourseID = 3141, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 4, CourseID = 3141, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 5, CourseID = 3141, Grade = Grade.A });
+            context.Enrollments.Add(new Enrollment { StudentID = 6, CourseID = 3141, Grade = Grade.F });
             context.Enrollments.Add(new Enrollment { StudentID = 7, CourseID = 3141, Grade = Grade.A });
-            
+            context.Enrollments.Add(new Enrollment { StudentID = 8, CourseID = 3141, Grade = Grade.B });
+            context.Enrollments.Add(new Enrollment { StudentID = 9, CourseID = 3141, Grade = Grade.F });
+            context.Enrollments.Add(new Enrollment { StudentID = 10, CourseID = 3141, Grade = Grade.F });
+
             //enrollments.ForEach(s => context.Enrollments.Add(s));
             context.SaveChanges();
 

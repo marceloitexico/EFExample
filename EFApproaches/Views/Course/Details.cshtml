@@ -1,9 +1,8 @@
 ﻿@model EFApproaches.DAL.Entities.Course
 
 @{
-    Layout = null;
+    ViewBag.Title = "Details";
 }
-
 <!DOCTYPE html>
 
 <html>
@@ -19,19 +18,60 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Title)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Title)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Credits)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Credits)
             </dd>
-    
+            <!--Students enrolled list-->
+            <dt>
+                @Html.DisplayNameFor(model => model.Enrollments) 
+            </dt>
+            @if (Model.Enrollments.Count > 0)
+            {
+                <dd>
+                    <table class="table">
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Grade</th>
+                        </tr>
+                        @foreach (var item in Model.Enrollments)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Grade)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </dd>
+                <b> Minimum amount of students in order for the Course to stay open:</b><span id="minimumReqMsgContainer"> @ViewBag.MinimumStudentsToStayOpen</span><br />
+                <span><b> Students:</b> @Model.Enrollments.Count()</span>
+                <br />
+                if (Model.Enrollments.Count >= ViewBag.MinimumStudentsToStayOpen)
+                {
+                    <span style="color:green" id="MinimumStudentsMessageContainer"> THE MINIMUM AMOUNT IS COMPLIED </span>
+                }
+                else
+                {
+                    <span style="color:red" id="NotMinimumStudentsMessageContainer"> THE MINIMUM AMOUNT IS NOT COMPLIED </span>
+                }
+            }
+            else
+            {
+                <span>: There are no students enrolled in this course</span>
+            }
+
         </dl>
     </div>
     <p>

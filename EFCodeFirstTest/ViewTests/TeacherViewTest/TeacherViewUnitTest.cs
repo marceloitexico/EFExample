@@ -26,7 +26,8 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
                     teacherIndexView = new _Views_Teacher_Index_cshtml();
                 }
                 return teacherIndexView;
-            } }
+            }
+        }
 
         [Test]
         public void ShouldRenderTeachersList()
@@ -34,39 +35,34 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
             // var sut = new _Views_Teacher_Index_cshtml();
             List<Teacher> indexModel = DataHelper.GenerateTeachersList();
             HtmlDocument html = TeacherIndexView.RenderAsHtml(indexModel);
-            var firstMidNameValueEls = html.DocumentNode.Descendants("span").Where(n => n.Attributes.Contains("class") && n.Attributes["class"].Value.Contains("firstNameValue"));
-            var lastNameValueEls = html.DocumentNode.Descendants("span").Where(n => n.Attributes.Contains("class") && n.Attributes["class"].Value.Contains("lastNameValue"));
+
             var titleValueEls = html.DocumentNode.Descendants("span").Where(n => n.Attributes.Contains("class") && n.Attributes["class"].Value.Contains("titleValue"));
             var emailAddressValueEls = html.DocumentNode.Descendants("span").Where(n => n.Attributes.Contains("class") && n.Attributes["class"].Value.Contains("emailAddressValue"));
             var fullNameValueEls = html.DocumentNode.Descendants("span").Where(n => n.Attributes.Contains("class") && n.Attributes["class"].Value.Contains("fullNameValue"));
-
+            var hoursPerWeekValueEls = html.DocumentNode.Descendants("span").Where(n => n.Attributes.Contains("class") && n.Attributes["class"].Value.Contains("hoursPerWeekValue"));
             Assert.Multiple(() =>
             {
-                int teacherNumber = 1;
+                int teacherIndex = 0;
                 //in this case, the Inner text should have the exact expected value.
                 foreach (var modelItem in indexModel)
                 {
-                    if (modelItem.FirstMidName != null)
+                    if (modelItem.FullName != null)
                     {
-                        Assert.That(firstMidNameValueEls.ElementAt(teacherNumber - 1).InnerText, Is.EqualTo(modelItem.FirstMidName), "does not contain First/Middle Name of teacher " + teacherNumber.ToString());
-                    }
-                    if (modelItem.LastName != null)
-                    {
-                        Assert.That(lastNameValueEls.ElementAt(teacherNumber - 1).InnerText, Is.EqualTo(modelItem.LastName), "does not contain Last Name of teacher " + teacherNumber.ToString());
+                        Assert.That(fullNameValueEls.ElementAt(teacherIndex).InnerText, Is.EqualTo(modelItem.FullName), "does not match Full Name of teacher " + modelItem.FullName);
                     }
                     if (modelItem.Title != null)
                     {
-                        Assert.That(titleValueEls.ElementAt(teacherNumber - 1).InnerText, Is.EqualTo(modelItem.Title), "does not contain Title of teacher " + teacherNumber.ToString());
+                        Assert.That(titleValueEls.ElementAt(teacherIndex).InnerText, Is.EqualTo(modelItem.Title), "does not match the Title of teacher " + modelItem.FullName);
                     }
                     if (modelItem.EmailAddress != null)
                     {
-                        Assert.That(emailAddressValueEls.ElementAt(teacherNumber - 1).InnerText, Is.EqualTo(modelItem.EmailAddress), "does not contain Email address of teacher " + teacherNumber.ToString());
+                        Assert.That(emailAddressValueEls.ElementAt(teacherIndex).InnerText, Is.EqualTo(modelItem.EmailAddress), "does not match Email address of teacher " + modelItem.FullName);
                     }
-                    if (modelItem.FullName != null)
+                    if (modelItem.HoursPerWeek != null)
                     {
-                        Assert.That(fullNameValueEls.ElementAt(teacherNumber - 1).InnerText, Is.EqualTo(modelItem.FullName), "does not contain Full Name of teacher " + teacherNumber.ToString());
+                        Assert.That(hoursPerWeekValueEls.ElementAt(teacherIndex).InnerText, Is.EqualTo(modelItem.HoursPerWeek.ToString()), "does not match Hour Per Week of teacher " + modelItem.FullName);
                     }
-                    teacherNumber++;
+                    teacherIndex++;
                 }
             });
         }
@@ -86,8 +82,11 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
             var isMinimumCompliedMessageRendered = html.GetElementbyId("MoreThanTwoStudentsMessage") != null;
             var fullTimeTeachersString = html.GetElementbyId("fullTimeTeachersContainer").InnerText;
             int fullTimeTeachersFromView = 0;
-            Assert.That(int.TryParse(fullTimeTeachersString, out fullTimeTeachersFromView), Is.EqualTo(true));
-            Assert.That(fullTimeTeachersFromView, Is.GreaterThanOrEqualTo(minimumFullTimeTeachers), "Amount of minimum full time teacher was not found");
+            Assert.Multiple(() =>
+            {
+                Assert.That(int.TryParse(fullTimeTeachersString, out fullTimeTeachersFromView), Is.EqualTo(true));
+                Assert.That(fullTimeTeachersFromView, Is.GreaterThanOrEqualTo(minimumFullTimeTeachers), "Amount of minimum full time teacher was not found");
+            });
         }
 
         [Test]
