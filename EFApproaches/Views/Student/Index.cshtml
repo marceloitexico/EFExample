@@ -53,13 +53,14 @@
 
     </table>
     <div id="amountMessagesContainer">
-        @if(Model.Count<Student>() > 3)
+        <span><b>Minimum students:</b>  @ViewBag.MinAmountOfStudents</span><br />
+        @if(Model.Count<Student>() >= ViewBag.MinAmountOfStudents)
         {
-            <div id="MoreThanTwoStudentsMessage">There are more than 3 students</div>
+            <div id="MinStudentsMessage" style="color:green">There are at least the minimum amount of students enrolled</div>
         }
         else
         {
-            <div id="MaxThreeStudentsMessage">There are 3 or less students</div>
+            <div id="LessThanMinStudentsMessage" style="color:red">There are not minimum amount of students enrolled</div>
         }
     </div>
 

@@ -50,9 +50,17 @@
 }
 </table>
 <div>
-    <b>Minimum hours required to be a Full Time teacher:  </b> <span>@ViewBag.MinimumHoursForFullTime</span>
-    <br />
+    <b>Minimum hours required to be a Full Time teacher:  </b> <span>@ViewBag.MinimumHoursForFullTime</span><br />
+    <b>Minimum full Time teachers required: </b> <span> @ViewBag.MinimumTeachersRequired</span><br />
     <b>Full time teachers:  </b><span id="fullTimeTeachersContainer">@ViewBag.FullTimeTeachers</span>
     <br />
     <b>Part time teachers:  </b><span id="partTimeTeachersContainer">@ViewBag.PartTimeTeachers</span>
+    @if (Model.Count(t => t.HoursPerWeek >= ViewBag.MinimumHoursForFullTime) >= ViewBag.MinimumTeachersRequired)
+    {
+        <div id="MinFullTimeTeachersMessage" style="color:green">There are at least the minimum amount of Fyll Time teachers</div>
+    }
+    else
+    {
+        <div id="LessThanMinFullTimeTeachersMessage" style="color:red">There are not minimum amount of full time teachers</div>
+    }
 </div>

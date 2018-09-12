@@ -17,6 +17,7 @@ namespace EFApproaches.Controllers
     {
         #region private members
         private static byte inexistentStudentID = 0;
+        private static int MinimumAmountOfStudents = 50;
         #endregion private members
         #region constructor
         public StudentController() { }
@@ -26,6 +27,7 @@ namespace EFApproaches.Controllers
         // GET: Students
         public ActionResult Index()
         {
+            ViewBag.MinAmountOfStudents = MinimumAmountOfStudents;
             return View(unitOfWork.StudentRepo.DataSet);
         }
         #region CRUD Actions

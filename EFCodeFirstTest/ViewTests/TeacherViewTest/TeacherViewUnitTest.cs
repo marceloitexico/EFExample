@@ -17,7 +17,9 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
     {
         private _Views_Teacher_Index_cshtml teacherIndexView = null;
         private static int minimunHoursForFullTime = 20;
-        private static int minimumFullTimeTeachers = 3;
+        private static int? fullTimeTeachers = null;
+        private static int? partTimeTeachers = null;
+
         public _Views_Teacher_Index_cshtml TeacherIndexView
         {
             get {
@@ -26,6 +28,30 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
                     teacherIndexView = new _Views_Teacher_Index_cshtml();
                 }
                 return teacherIndexView;
+            }
+        }
+
+        public static int? FullTimeTeachers
+        {
+            get
+            {
+                if (fullTimeTeachers == null)
+                {
+                    fullTimeTeachers = DataHelper.GenerateTeachersList().FindAll(t => t.HoursPerWeek >= minimunHoursForFullTime).Count();
+                }
+                return fullTimeTeachers;
+            }
+        }
+
+        public static int? PartTimeTeachers
+        {
+            get
+            {
+                if (partTimeTeachers == null)
+                {
+                    partTimeTeachers = DataHelper.GenerateTeachersList().FindAll(t => t.HoursPerWeek < minimunHoursForFullTime).Count();
+                }
+                return partTimeTeachers;
             }
         }
 
@@ -72,21 +98,14 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
         {
             var sut = TeacherIndexView;
             List<Teacher> indexModel = DataHelper.GenerateTeachersList();
-            //int FulltimeTeachers = indexModel.FindAll(t => t.HoursPerWeek > minimunHoursForFullTime).Count();
-            int FulltimeTeachers = (from t in indexModel
-                                    where t.HoursPerWeek >= minimunHoursForFullTime
-                                    select t).Count();
-            sut.ViewBag.FullTimeTeachers = indexModel.FindAll(t => t.HoursPerWeek >= minimunHoursForFullTime).Count();
-            sut.ViewBag.PartTimeTeachers = indexModel.FindAll(t => t.HoursPerWeek < minimunHoursForFullTime).Count();
+
+            sut.ViewBag.FullTimeTeachers  = FullTimeTeachers;
+            sut.ViewBag.PartTimeTeachers = PartTimeTeachers;
+            sut.ViewBag.MinimumTeachersRequired = sut.ViewBag.FullTimeTeachers;
+            sut.ViewBag.MinimumHoursForFullTime = minimunHoursForFullTime;
             HtmlDocument html = sut.RenderAsHtml(indexModel);
-            var isMinimumCompliedMessageRendered = html.GetElementbyId("MoreThanTwoStudentsMessage") != null;
-            var fullTimeTeachersString = html.GetElementbyId("fullTimeTeachersContainer").InnerText;
-            int fullTimeTeachersFromView = 0;
-            Assert.Multiple(() =>
-            {
-                Assert.That(int.TryParse(fullTimeTeachersString, out fullTimeTeachersFromView), Is.EqualTo(true));
-                Assert.That(fullTimeTeachersFromView, Is.GreaterThanOrEqualTo(minimumFullTimeTeachers), "Amount of minimum full time teacher was not found");
-            });
+            var isMinimumCompliedMessageRendered = (html.GetElementbyId("MinFullTimeTeachersMessage") != null);
+            Assert.That(isMinimumCompliedMessageRendered, Is.True , "Minimum full time teachers message was NOT rendered");
         }
 
         [Test]
@@ -94,19 +113,13 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
         {
             var sut = TeacherIndexView;
             List<Teacher> indexModel = DataHelper.GenerateTeachersList();
-            indexModel.RemoveAll(t => t.HoursPerWeek >= minimunHoursForFullTime);
-            int FulltimeTeachers = (from t in indexModel
-                                    where t.HoursPerWeek >= minimunHoursForFullTime
-                                    select t).Count();
-
-            sut.ViewBag.FullTimeTeachers = indexModel.FindAll(t => t.HoursPerWeek >= minimunHoursForFullTime).Count();
-            sut.ViewBag.PartTimeTeachers = indexModel.FindAll(t => t.HoursPerWeek < minimunHoursForFullTime).Count();
+            sut.ViewBag.FullTimeTeachers = FullTimeTeachers;
+            sut.ViewBag.PartTimeTeachers = PartTimeTeachers;
+            sut.ViewBag.MinimumTeachersRequired = sut.ViewBag.FullTimeTeachers + 1;
+            sut.ViewBag.MinimumHoursForFullTime = minimunHoursForFullTime;
             HtmlDocument html = sut.RenderAsHtml(indexModel);
-            var isMinimumCompliedMessageRendered = html.GetElementbyId("MoreThanTwoStudentsMessage") != null;
-            var fullTimeTeachersString = html.GetElementbyId("fullTimeTeachersContainer").InnerText;
-            int fullTimeTeachersFromView = 0;
-            Assert.That(int.TryParse(fullTimeTeachersString, out fullTimeTeachersFromView), Is.EqualTo(true));
-            Assert.That(fullTimeTeachersFromView, Is.LessThan(minimumFullTimeTeachers), "Amount of minimum full time teacher was not found");
+            var isMinimumNotCompliedMessageRendered = (html.GetElementbyId("LessThanMinFullTimeTeachersMessage") != null);
+            Assert.That(isMinimumNotCompliedMessageRendered, Is.True, "Minimum full time teachers not accomplished  message was NOT rendered");
         }
 
         //test viewbag message, change it to pass the minimumhours for be a full time 

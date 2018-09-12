@@ -55,8 +55,9 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
         {
             var sut = new _Views_Student_Index_cshtml();
             List<Student> indexModel = DataHelper.GenerateStudentsList();
+            sut.ViewBag.MinAmountOfStudents = indexModel.Count();
             HtmlDocument html = sut.RenderAsHtml(indexModel);
-            var isMinimumCompliedMessageRendered = html.GetElementbyId("MoreThanTwoStudentsMessage") != null;
+            var isMinimumCompliedMessageRendered = html.GetElementbyId("MinStudentsMessage") != null;
             Assert.That(isMinimumCompliedMessageRendered, Is.True);
         }
         [Test]
@@ -64,41 +65,10 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
         {
             var sut = new _Views_Student_Index_cshtml();
             List<Student> indexModel = DataHelper.GenerateStudentsList();
-            indexModel.RemoveAt(0);
+            sut.ViewBag.MinAmountOfStudents = indexModel.Count() + 1;
             HtmlDocument html = sut.RenderAsHtml(indexModel);
-            //var message = html.GetElementbyId("amountMessagesContainer").InnerText;
-            var isMinimumNotCompliedMessageRendered = html.GetElementbyId("MaxThreeStudentsMessage") != null;
+            var isMinimumNotCompliedMessageRendered = html.GetElementbyId("LessThanMinStudentsMessage") != null;
             Assert.That(isMinimumNotCompliedMessageRendered,Is.True);
         }
-
-        [Test]
-        [Ignore("Just to check content of Field using DisplayNameFor helper")]
-        public void failedTestByDisplayNameFor()
-        {
-            var sut = new _Views_Student_Index_cshtml();
-            List<Student> indexModel = DataHelper.GenerateStudentsList();
-            indexModel.RemoveAt(0);
-            indexModel.RemoveAt(0);
-            indexModel.RemoveAt(0);
-            HtmlDocument html = sut.RenderAsHtml(indexModel);
-            var firstMidNameValue = html.GetElementbyId("firstMidNameValue").InnerText;
-            Assert.That(firstMidNameValue, Is.EqualTo("John"));
-
-        }
-
-        /*
-        public void failedTestByDisplayNameFor()
-        {
-            var sut = new _Views_Student_Index_cshtml();
-            List<Student> indexModel = DataHelper.GenerateStudentsList();
-            var indexModelCount = indexModel.Count;
-            for (int stdCount = 0 ; stdCount < (indexModelCount - 1); stdCount++)
-            {
-                indexModel.RemoveAt(0);
-            }
-            HtmlDocument html = sut.RenderAsHtml(indexModel);
-            var firstMidNameValue = html.GetElementbyId("firstMidNameValue").InnerText;
-            Assert.That(firstMidNameValue, Is.EqualTo("John"));
-        }*/
     }
 }

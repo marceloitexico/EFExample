@@ -72,29 +72,21 @@ namespace EFCodeFirstTest.ViewTests
         {
             Course courseWithEnrollments = DataHelper.GenerateCourseWithTenStudents();
             var sut = CourseDetailsView;
-            sut.ViewBag.MinimumStudentsToStayOpen = minimumStudentsToStayOpen;
+            sut.ViewBag.MinimumStudentsToStayOpen = courseWithEnrollments.Enrollments.Count;
             HtmlDocument html = sut.RenderAsHtml(courseWithEnrollments);
-            var isMinimumStudentsMessageRendered = html.GetElementbyId("MinimumStudentsMessageContainer");
-            var minimumRequiredStudentsMessage = html.GetElementbyId("minimumReqMsgContainer").InnerText;
-            int minimumStudents = 0;
-            Assert.Multiple(() =>
-            {
-                Assert.That(int.TryParse(minimumRequiredStudentsMessage, out minimumStudents), Is.True);
-                Assert.That(minimumStudents, Is.EqualTo(minimumStudentsToStayOpen));
-                Assert.That(isMinimumStudentsMessageRendered, Is.Not.Null);
-            });
+            var isMinimumStudentsMessageRendered = html.GetElementbyId("MinimumStudentsMessageContainer"); 
+            Assert.That(isMinimumStudentsMessageRendered, Is.Not.Null);
         }
 
         [Test]
         public void CourseShouldNotComplyMinimunToStayOpen()
         {
             Course courseWithEnrollments = DataHelper.GenerateCourseWithTenStudents();
-            courseWithEnrollments.Enrollments.Remove(courseWithEnrollments.Enrollments.ElementAt(0));
             var sut = CourseDetailsView;
-            sut.ViewBag.MinimumStudentsToStayOpen = minimumStudentsToStayOpen;
+            sut.ViewBag.MinimumStudentsToStayOpen = courseWithEnrollments.Enrollments.Count + 1;
             HtmlDocument html = sut.RenderAsHtml(courseWithEnrollments);
-            var isMinimumStudentsMessageRendered = html.GetElementbyId("MinimumStudentsMessageContainer");
-            Assert.That(isMinimumStudentsMessageRendered, Is.Null);
+            var notMinimumStudentsMessageRendered = html.GetElementbyId("NotMinimumStudentsMessageContainer");
+            Assert.That(notMinimumStudentsMessageRendered, Is.Not.Null);
         }
     }
 }

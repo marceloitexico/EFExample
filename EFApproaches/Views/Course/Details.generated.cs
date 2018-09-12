@@ -68,18 +68,20 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </dt>\r\n\r\n            <dd>\r\n");
+WriteLiteral("\r\n            </dt>\r\n\r\n            <dd>\r\n                <span");
 
-WriteLiteral("                ");
+WriteLiteral(" id=\"titleSpan\"");
+
+WriteLiteral("> ");
 
             
             #line 23 "..\..\Views\Course\Details.cshtml"
-           Write(Html.DisplayFor(model => model.Title));
+                                 Write(Model.Title);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </dd>\r\n\r\n            <dt>\r\n");
+WriteLiteral(" </span>\r\n            </dd>\r\n\r\n            <dt>\r\n");
 
 WriteLiteral("                ");
 
@@ -90,19 +92,21 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </dt>\r\n\r\n            <dd>\r\n");
+WriteLiteral("\r\n            </dt>\r\n\r\n            <dd>\r\n                <span");
 
-WriteLiteral("                ");
+WriteLiteral(" id=\"creditsSpan\"");
+
+WriteLiteral("> ");
 
             
             #line 31 "..\..\Views\Course\Details.cshtml"
-           Write(Html.DisplayFor(model => model.Credits));
+                                   Write(Model.Credits);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </dd>\r\n            <!--Students enrolled list-->\r\n            <dt>\r" +
-"\n");
+WriteLiteral(" </span>\r\n            </dd>\r\n            <!--Students enrolled list-->\r\n         " +
+"   <dt>\r\n");
 
 WriteLiteral("                ");
 
@@ -285,7 +289,7 @@ WriteLiteral("        ");
 
             
             #line 79 "..\..\Views\Course\Details.cshtml"
-   Write(Html.ActionLink("Back to List", "Index"));
+   Write(Html.ActionLink("Back to List", "Index", null, new { id = "backToListLink" }));
 
             
             #line default

@@ -248,17 +248,26 @@ WriteLiteral("\r\n    </table>\r\n    <div");
 
 WriteLiteral(" id=\"amountMessagesContainer\"");
 
-WriteLiteral(">\r\n");
+WriteLiteral(">\r\n        <span><b>Minimum students:</b>  ");
 
             
             #line 56 "..\..\Views\Student\Index.cshtml"
+                                   Write(ViewBag.MinAmountOfStudents);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span><br />\r\n");
+
+            
+            #line 57 "..\..\Views\Student\Index.cshtml"
         
             
             #line default
             #line hidden
             
-            #line 56 "..\..\Views\Student\Index.cshtml"
-         if(Model.Count<Student>() > 3)
+            #line 57 "..\..\Views\Student\Index.cshtml"
+         if(Model.Count<Student>() >= ViewBag.MinAmountOfStudents)
         {
 
             
@@ -266,12 +275,14 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("            <div");
 
-WriteLiteral(" id=\"MoreThanTwoStudentsMessage\"");
+WriteLiteral(" id=\"MinStudentsMessage\"");
 
-WriteLiteral(">There are more than 3 students</div>\r\n");
+WriteLiteral(" style=\"color:green\"");
+
+WriteLiteral(">There are at least the minimum amount of students enrolled</div>\r\n");
 
             
-            #line 59 "..\..\Views\Student\Index.cshtml"
+            #line 60 "..\..\Views\Student\Index.cshtml"
         }
         else
         {
@@ -281,12 +292,14 @@ WriteLiteral(">There are more than 3 students</div>\r\n");
             #line hidden
 WriteLiteral("            <div");
 
-WriteLiteral(" id=\"MaxThreeStudentsMessage\"");
+WriteLiteral(" id=\"LessThanMinStudentsMessage\"");
 
-WriteLiteral(">There are 3 or less students</div>\r\n");
+WriteLiteral(" style=\"color:red\"");
+
+WriteLiteral(">There are not minimum amount of students enrolled</div>\r\n");
 
             
-            #line 63 "..\..\Views\Student\Index.cshtml"
+            #line 64 "..\..\Views\Student\Index.cshtml"
         }
 
             

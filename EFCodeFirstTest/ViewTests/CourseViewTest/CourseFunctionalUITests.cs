@@ -37,24 +37,24 @@ namespace EFCodeFirstTest.ViewTests.CourseViewTest
             Assert.Multiple(() =>
             {
                 Assert.That(newCourseIDElement, Is.Not.Null);
-                /*if (null != newCourseIDElement)
+                if (null != newCourseIDElement)
                 {
-                    //--> fill teacher index info
+                    //--> get course details link view element
                     detailsCourseLink = newCourseIDElement.FindElements(By.XPath("ancestor::tr//descendant::a[@class='detailsCourse']")).FirstOrDefault();
 
                     //Assert for details of created teacher
                     SeeCoursesDetails(detailsCourseLink, createdCourse);
-
+                    
                     //Edit teacher
                     editCourseLink = getIndexLinkElement(newCourseInIndexXPath, "editCourse");
-                    var editedCourse = EditCourse(editCourseLink, randomFirstMidName);
-                    //update link with fullName 
-                    newCourseInIndexXPath = "//span[text()='" + editedCourse.FullName + "']";
+                    var editedCourse = EditCourse(editCourseLink);
+                    //update link with title 
+                    newCourseInIndexXPath = "//span[text()='" + editedCourse.Title + "']";
                     //get link for details
                     detailsCourseLink = getIndexLinkElement(newCourseInIndexXPath, "detailsCourse");
                     //Assert for details of edited teacher
                     SeeCoursesDetails(detailsCourseLink, editedCourse);
-
+                    
                     //Delete created teacher
                     deleteCourseLink = getIndexLinkElement(newCourseInIndexXPath, "deleteCourse");
                     DeleteCourse(deleteCourseLink);
@@ -62,8 +62,48 @@ namespace EFCodeFirstTest.ViewTests.CourseViewTest
                     //new teacher should not exist in teachers list
                     newCourseIDElement = BrowserHost.Driver.FindElements(By.XPath(newCourseInIndexXPath)).FirstOrDefault();
                     Assert.That(newCourseIDElement, Is.Null);
-                }*/
+                    
+                }
             });
+        }
+
+        private void DeleteCourse(IWebElement deleteCourseLink)
+        {
+            deleteCourseLink.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
+            var confirmDeleteBtn = BrowserHost.Driver.FindElement(By.Id("confirmDeleteBtn"));
+            confirmDeleteBtn.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
+        }
+
+        private Course EditCourse(IWebElement editCourseLink)
+        {
+            editCourseLink.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
+            Course editCourseData = new Course
+            {
+                Title =  "EditedCourse" + Utilities.GenerateRandomNumber().ToString()  + "_Gecko",
+                Credits = 44,
+                CourseID = 2222
+            };
+            captureDataIntoCourseForm(editCourseData, true);
+            var saveBtn = BrowserHost.Driver.FindElement(By.Id("saveBtn"));
+            saveBtn.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
+            return editCourseData;
+        }
+
+        private void SeeCoursesDetails(IWebElement detailsCourseLink, Course createdCourse)
+        {
+            detailsCourseLink.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
+            var element = BrowserHost.Driver.FindElement(By.Id("titleSpan"));
+            Assert.That(createdCourse.Title, Is.EqualTo(element.Text));
+            element = BrowserHost.Driver.FindElement(By.Id("creditsSpan"));
+            Assert.That(createdCourse.Credits.ToString(), Is.EqualTo(element.Text));
+            var backToListLink = BrowserHost.Driver.FindElement(By.Id("backToListLink"));
+            backToListLink.Click();
+            Utilities.Wait(standardTimeBetweenPagesMS);
         }
 
         private Course CreateCourse()
@@ -86,20 +126,8 @@ namespace EFCodeFirstTest.ViewTests.CourseViewTest
 
         private void captureDataIntoCourseForm(Course newCourseData, bool isCreating )
         {
-            if (true == isCreating)
-            {
-                captureDataIntoControl("Title", newCourseData.Title);
-            }
+            captureDataIntoControl("Title", newCourseData.Title);
             captureDataIntoControl("Credits", newCourseData.Credits.ToString());
         }
-
-        private void captureDataIntoControl(string elementID, string data)
-        {
-            var element = BrowserHost.Driver.FindElement(By.Id(elementID));
-            element.Clear();
-            element.SendKeys(data);
-        }
-
-
     }
 }

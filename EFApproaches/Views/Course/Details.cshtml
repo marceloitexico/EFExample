@@ -20,7 +20,7 @@
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.Title)
+                <span id="titleSpan"> @Model.Title </span>
             </dd>
 
             <dt>
@@ -28,7 +28,7 @@
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.Credits)
+                <span id="creditsSpan"> @Model.Credits </span>
             </dd>
             <!--Students enrolled list-->
             <dt>
@@ -76,7 +76,7 @@
     </div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.CourseID }) |
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Back to List", "Index", null, new { id = "backToListLink" })
     </p>
 </body>
 </html>

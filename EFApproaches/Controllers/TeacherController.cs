@@ -14,6 +14,8 @@ namespace EFApproaches.Controllers
         #region private members
         private static byte inexistentTeacherID = 0;
         private static int tempMinimumHoursForFullTime = 20;
+
+        private static int MinimumTeachersRequired = 3;
         #endregion private members
         #region constructor
         public TeacherController() { }
@@ -27,6 +29,7 @@ namespace EFApproaches.Controllers
             ViewBag.FullTimeTeachers = fullTimeTeachers;
             ViewBag.PartTimeTeachers = partTimeTeachers;
             ViewBag.MinimumHoursForFullTime = tempMinimumHoursForFullTime;
+            ViewBag.MinimumTeachersRequired = MinimumTeachersRequired;
             return View(unitOfWork.TeacherRepo.DataSet);
         }
 

@@ -232,7 +232,16 @@ WriteLiteral("</table>\r\n<div>\r\n    <b>Minimum hours required to be a Full Ti
             
             #line default
             #line hidden
-WriteLiteral("</span>\r\n    <br />\r\n    <b>Full time teachers:  </b><span");
+WriteLiteral("</span><br />\r\n    <b>Minimum full Time teachers required: </b> <span> ");
+
+            
+            #line 54 "..\..\Views\Teacher\Index.cshtml"
+                                                   Write(ViewBag.MinimumTeachersRequired);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span><br />\r\n    <b>Full time teachers:  </b><span");
 
 WriteLiteral(" id=\"fullTimeTeachersContainer\"");
 
@@ -258,7 +267,55 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span>\r\n</div>\r\n");
+WriteLiteral("</span>\r\n");
+
+            
+            #line 58 "..\..\Views\Teacher\Index.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 58 "..\..\Views\Teacher\Index.cshtml"
+     if (Model.Count(t => t.HoursPerWeek >= ViewBag.MinimumHoursForFullTime) >= ViewBag.MinimumTeachersRequired)
+    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("        <div");
+
+WriteLiteral(" id=\"MinFullTimeTeachersMessage\"");
+
+WriteLiteral(" style=\"color:green\"");
+
+WriteLiteral(">There are at least the minimum amount of Fyll Time teachers</div>\r\n");
+
+            
+            #line 61 "..\..\Views\Teacher\Index.cshtml"
+    }
+    else
+    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("        <div");
+
+WriteLiteral(" id=\"LessThanMinFullTimeTeachersMessage\"");
+
+WriteLiteral(" style=\"color:red\"");
+
+WriteLiteral(">There are not minimum amount of full time teachers</div>\r\n");
+
+            
+            #line 65 "..\..\Views\Teacher\Index.cshtml"
+    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</div>\r\n");
 
         }
     }
