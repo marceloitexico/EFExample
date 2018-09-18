@@ -1,0 +1,2906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="A8-E3-19-B0-9B-76-7C-CA-72-8F-CE-1D-4E-5A-74-F2-85-A9-79-F0">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</ModulePath>
+      <ModuleTime>2018-08-02T00:58:06.6032535Z</ModuleTime>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="E7-31-81-0A-1D-A1-1C-0F-9E-3B-97-32-70-A6-A3-16-BA-90-BD-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\MSTest.exe</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>MSTest</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="8E-95-7D-46-50-0C-6F-81-8E-58-CC-6A-33-D4-D5-98-5D-9C-2E-75">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="08-DE-EA-E1-0B-80-32-F5-3F-FB-C0-A6-E1-61-D8-B3-5E-75-1A-C4">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2018-07-25T03:18:11.8724221Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="24-3D-27-EE-0D-CD-60-00-81-A4-60-73-75-7A-54-27-E3-E7-DC-A1">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.ExecutionCommon</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="87-E4-25-1A-D3-CF-05-EB-DC-C1-9F-A6-AA-32-13-67-DA-A9-3D-49">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Resource</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2A-F4-1C-14-5D-7A-74-B3-03-8B-1D-2A-59-DC-B6-BE-1D-C8-EF-54">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:16.9508953Z</ModuleTime>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-26-5B-FA-55-E9-5B-BC-DD-3A-32-56-2C-38-71-11-1A-8E-6D-32">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:17.0290261Z</ModuleTime>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="3D-3A-F4-31-99-E9-1A-BC-10-01-17-8F-3B-C2-C4-2D-EF-DD-CD-7E">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.CommandLine.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.CommandLine</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="AC-03-07-84-A7-7E-77-0B-2F-A4-5D-5D-BB-6F-84-03-4A-D9-FD-E3">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\es\Microsoft.VisualStudio.QualityTools.Resource.resources.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Resource.resources</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="BB-19-F6-20-4A-58-70-88-B0-04-D4-7F-B7-FB-8C-F1-48-BC-34-98">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.TMI.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.TMI</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="8A-A3-7C-51-36-22-C7-D2-9D-0E-92-82-67-4D-3C-F3-60-CF-41-6A">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
+      <ModuleTime>2018-07-11T01:24:40.3313641Z</ModuleTime>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="5E-75-B0-04-A5-00-F6-29-47-79-54-D4-62-D3-B2-94-D5-05-11-E1">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</ModulePath>
+      <ModuleTime>2018-07-11T01:24:41.8030578Z</ModuleTime>
+      <ModuleName>System.Data</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="CB-9A-69-FA-E9-A7-1D-79-EC-E4-45-7B-80-24-5F-0E-56-96-EA-D4">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:17.0446523Z</ModuleTime>
+      <ModuleName>System.Numerics</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="56-19-E4-7F-9D-08-2A-5D-25-92-FC-AC-8E-40-FB-0D-95-AA-95-71">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</ModulePath>
+      <ModuleTime>2018-07-11T01:24:41.6624236Z</ModuleTime>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="">
+      <ModulePath>RefEmit_InMemoryManifestModule</ModulePath>
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Microsoft.GeneratedCode</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="0A-5F-79-5D-4A-FF-E6-FA-DF-09-E4-27-EB-28-73-CE-94-60-9D-98">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="3D-2E-0C-51-3C-07-C1-88-E7-AD-9D-5D-9C-39-1C-59-21-0B-F2-0D">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="83-EB-DC-BB-31-C8-81-81-61-D7-D7-C7-9B-AC-84-74-C1-2D-C2-2B">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.UnitTestFramework</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="02-4C-EE-7A-02-DB-87-31-DF-AC-1C-E0-E3-74-57-73-8E-B3-2D-23">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2018-08-02T13:50:31.5242879Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="BC-C2-33-76-51-51-DC-1A-BD-86-37-4A-5E-73-4C-5B-C6-3A-E4-6F">
+      <ModulePath>C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll</ModulePath>
+      <ModuleTime>2018-09-14T17:48:42.8192595Z</ModuleTime>
+      <ModuleName>EFCodeFirstTest</ModuleName>
+      <Classes />
+    </Module>
+    <Module hash="39-78-96-31-B7-B5-98-A6-5A-C6-D9-E2-FF-C4-59-E0-B6-4A-9E-D2">
+      <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+      <ModulePath>C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\Moq.dll</ModulePath>
+      <ModuleTime>2018-07-13T23:18:20Z</ModuleTime>
+      <ModuleName>Moq</ModuleName>
+      <Files />
+      <Classes>
+        <Class skippedDueTo="Filter">
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>__ProtectAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>ThisAssembly</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>ThisAssembly/Git</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>ThisAssembly/Git/BaseVersion</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>ThisAssembly/Git/SemVer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.AsInterface`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Capture</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CaptureMatch`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CaptureMatch`1/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CaptureMatch`1/&lt;&gt;c__DisplayClass1_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CaptureMatch`1/&lt;&gt;c__DisplayClass2_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CaptureMatch`1/&lt;&gt;c__DisplayClass3_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Condition</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ConditionalContext`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.DefaultValueProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.EmptyDefaultValueProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.EmptyDefaultValueProvider/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Evaluator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Evaluator/SubtreeEvaluator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Evaluator/Nominator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Evaluator/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.EventHandlerCollection</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ExpressionComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ExpressionExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ExpressionStringBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Extensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Extensions/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.FluentMockContext</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.FluentMockContext/MockInvocation</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Guard</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.InterceptionAspect</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.HandleWellKnownMethods</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.HandleWellKnownMethods/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.FindAndExecuteMatchingSetup</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.HandleTracking</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.RecordInvocation</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Return</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/FluentMockVisitor</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__5`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__DisplayClass56_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__DisplayClass58_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__DisplayClass66_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__DisplayClass68_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__DisplayClass75_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock/&lt;&gt;c__DisplayClass75_1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Invocation</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.InvocationCollection</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.InvocationCollection/&lt;GetEnumerator&gt;d__12</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/Ref`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__1`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__2`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass3_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass4_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass5_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass6_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass7_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass8_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass9_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.It/&lt;&gt;c__DisplayClass10_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockRepository</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockRepository/&lt;CreateMocks&gt;d__6`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mocks</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mocks/&lt;CreateMocks&gt;d__6`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.QueryableMockExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.LookupOrFallbackDefaultValueProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Match</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Match`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MatcherFactory</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MatchExpression</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall`1/&lt;&gt;c__DisplayClass1_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall/AssignmentCompatibilityTypeComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall/RaiseEventResponse</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall/&lt;&gt;c__DisplayClass33_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall/&lt;&gt;c__DisplayClass42_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall/&lt;&gt;c__DisplayClass43_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCall/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2/&lt;&gt;c__DisplayClass6_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2/&lt;&gt;c__DisplayClass9_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2/&lt;&gt;c__DisplayClass11_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2/&lt;&gt;c__DisplayClass20_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MethodCallReturn`2/&lt;&gt;c__DisplayClass21_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock`1/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Mock`1/&lt;&gt;c__DisplayClass74_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockDefaultValueProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockException/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockSequence</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockSequence/&lt;&gt;c__DisplayClass8_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockSequenceHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MatcherAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockLegacyExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockFactory</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.MockFactory/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ObsoleteMockExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SequenceExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SequenceExtensions/&lt;&gt;c__DisplayClass2_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SequenceExtensions/&lt;&gt;c__DisplayClass3_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SequenceExtensions/&lt;&gt;c__DisplayClass4_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SequenceExtensions/&lt;&gt;c__DisplayClass5_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.PexProtector</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.PropertyGetterMethodCall</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.PropertySetterMethodCall</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CastleProxyFactory</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CastleProxyFactory/Interceptor</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CastleProxyFactory/Invocation</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CastleProxyFactory/IncludeObjectMethodsHook</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.CastleProxyFactory/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ProxyFactory</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass0_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass1_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass2_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass3_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass4_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass5_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass6_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass21_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass22_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass23_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass23_1`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass24_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.ReturnsExtensions/&lt;&gt;c__DisplayClass24_1`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass0_0`3</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass1_0`4</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass2_0`5</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass3_0`6</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass4_0`7</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass5_0`8</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass6_0`9</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass7_0`10</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass8_0`11</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass9_0`12</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass10_0`13</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass11_0`14</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass12_0`15</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass13_0`16</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass14_0`17</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass15_0`3</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass16_0`4</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass17_0`5</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass18_0`6</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass19_0`7</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass20_0`8</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass21_0`9</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass22_0`10</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass23_0`11</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass24_0`12</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass25_0`13</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass26_0`14</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass27_0`15</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass28_0`16</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.GeneratedReturnsExtensions/&lt;&gt;c__DisplayClass29_0`17</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SequenceMethodCall</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SetterMethodCall`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SetterMethodCall`2/&lt;&gt;c__DisplayClass1_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SetupCollection</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.SetupCollection/&lt;&gt;c__DisplayClass7_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.StringBuilderExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Times/&lt;&gt;c__DisplayClass5_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Times/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Times/&lt;&gt;c__DisplayClass7_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Times/&lt;&gt;c__DisplayClass9_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Times/&lt;&gt;c__DisplayClass10_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Internals.InterfaceProxy</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Internals.InterfaceProxy/Invocation</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/Ref`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/Ref`1/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/&lt;&gt;c__1`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/&lt;&gt;c__2`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/&lt;&gt;c__3`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/&lt;&gt;c__DisplayClass4_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/&lt;&gt;c__DisplayClass5_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ItExpr/&lt;&gt;c__DisplayClass6_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedAsMock`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedAsMock`2/DuckReplacer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedAsMock`2/DuckReplacer/&lt;&gt;c__DisplayClass6_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedAsMock`2/DuckReplacer/&lt;&gt;c__DisplayClass7_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedExtension</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedMock`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedMock`1/&lt;&gt;c__DisplayClass18_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Protected.ProtectedMock`1/&lt;ToExpressionArgs&gt;d__30</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Properties.Resources</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.AnyMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.ConstantMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.ExpressionMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.LazyEvalMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.MatcherAttributeMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.MatcherAttributeMatcher/&lt;&gt;c__DisplayClass3_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.MatcherAttributeMatcher/&lt;&gt;c__DisplayClass3_1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.MatcherAttributeMatcher/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.ParamArrayMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.ParamArrayMatcher/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.RefMatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Matchers.RefMatcher/&lt;&gt;c__DisplayClass1_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Linq.FluentMockVisitor</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Linq.FluentMockVisitor/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Linq.MockQueryable`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Linq.MockSetupsBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Linq.MockSetupsBuilder/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Language.Flow.SetupSequencePhrase</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Language.Flow.SetupSequencePhrase`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>Moq.Language.Flow.SetupSequencePhrase`1/&lt;&gt;c__DisplayClass4_0</FullName>
+          <Methods />
+        </Class>
+      </Classes>
+    </Module>
+    <Module hash="AF-00-89-8E-23-29-6C-3D-DA-76-42-D2-8F-D5-0D-78-C7-55-E7-F5">
+      <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+      <ModulePath>C:\Users\Developer\Documents\GitHub\EFExample\EFCodeFirstTest\bin\Debug\nunit.framework.dll</ModulePath>
+      <ModuleTime>2018-03-13T04:58:16Z</ModuleTime>
+      <ModuleName>nunit.framework</ModuleName>
+      <Files />
+      <Classes>
+        <Class skippedDueTo="Filter">
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.FrameworkPackageSettings</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Compatibility.AttributeHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Compatibility.LongLivedMarshalByRefObject</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Compatibility.MemberInfoExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Compatibility.AdditionalTypeExtensions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Compatibility.AdditionalTypeExtensions/&lt;&gt;c__DisplayClass2_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Compatibility.NUnitNullType</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Assert</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestDelegate</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.AsyncTestDelegate</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.AssertionHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Assume</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ApartmentAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.AuthorAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.CategoryAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.CombinatorialAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.CombiningStrategyAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.CultureAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DataAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DatapointAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DatapointsAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DatapointSourceAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DefaultFloatingPointToleranceAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DescriptionAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ExplicitAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.IgnoreAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.IncludeExcludeAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.LevelOfParallelismAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.MaxTimeAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.NonParallelizableAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.NonTestAssemblyAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.NUnitAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.OneTimeSetUpAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.OneTimeTearDownAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.OrderAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.PairwiseAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ParallelizableAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.PlatformAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.PropertyAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/RandomDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/RandomDataSource`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/RandomDataSource`1/&lt;GetData&gt;d__8</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/RandomDataConverter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/RandomDataConverter/&lt;GetData&gt;d__2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/IntDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/UIntDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/LongDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/ULongDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/ShortDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/UShortDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/DoubleDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/FloatDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/ByteDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/SByteDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/EnumDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/EnumDataSource/&lt;GetData&gt;d__3</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RandomAttribute/DecimalDataSource</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RangeAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RepeatAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RepeatAttribute/RepeatedTestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RequiresThreadAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RetryAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.RetryAttribute/RetryCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SequentialAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SetCultureAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SetUICultureAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SetUpAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SetUpFixtureAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SingleThreadedAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TearDownAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestActionAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestAssemblyDirectoryResolveAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestCaseAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestCaseAttribute/&lt;BuildFrom&gt;d__64</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestCaseSourceAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestCaseSourceAttribute/&lt;BuildFrom&gt;d__22</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestFixtureAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestFixtureAttribute/&lt;BuildFrom&gt;d__48</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestFixtureSourceAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestFixtureSourceAttribute/&lt;BuildFrom&gt;d__17</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestOfAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TheoryAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TimeoutAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ValuesAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ValueSourceAttribute</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.CollectionAssert</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Contains</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.DirectoryAssert</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Does</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.AssertionException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.IgnoreException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.InconclusiveException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.MultipleAssertException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ResultStateException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.SuccessException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.FileAssert</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Guard</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Has</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Is</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Iz</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.List</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.ListMapper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.StringAssert</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestCaseData</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestContext</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestContext/TestAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestContext/ResultAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestContext/PropertyBagAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestContext/&lt;&gt;c__DisplayClass63_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestContext/&lt;&gt;c__DisplayClass63_1`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestFixtureData</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.TestParameters</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Throws</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Warn</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.AssemblyHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.AsyncInvocationRegion</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.AsyncInvocationRegion/AsyncTaskInvocationRegion</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.AsyncInvocationRegion/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ConstraintUtils</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.CultureDetector</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ExceptionHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TextMessageWriter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.GenericMethodHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.InvalidDataSourceException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.InvalidPlatformException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.InvalidTestFixtureException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.InternalTrace</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.InternalTraceWriter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Logger</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.MethodWrapper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.NUnitException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.OSPlatform</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.OSPlatform/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ParamAttributeTypeConversions</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ParameterWrapper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.PlatformHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.PropertyBag</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.PropertyNames</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Randomizer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Reflect</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Reflect/BaseTypesFirstComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestCaseResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestResult/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestSuiteResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.RuntimeFramework</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.RuntimeFramework/&lt;&gt;c__DisplayClass29_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.RuntimeFramework/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.StackFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.StringUtil</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestCaseParameters</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestCaseTimeoutException</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestExecutionContext</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestExecutionContext/IsolatedContext</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestExecutionContext/AdhocContext</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestExecutionContext/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestFilter/EmptyFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestFixtureParameters</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestListener</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/NameFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/TestIDFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/FixedTextFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/MethodNameFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/NamespaceFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/MethodFullNameFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/ClassNameFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/ClassFullNameFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/ArgListFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestNameGenerator/ArgumentFragment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestParameters</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestProgressReporter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ParameterizedFixtureSuite</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ParameterizedMethodSuite</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.SetUpFixture</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Test</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestAssembly</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestFixture</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestMethod</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TestSuite</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ThreadUtility</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ThreadUtility/DelayClosure</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.ThreadUtility/CheckOnAbortingThreadState</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TypeHelper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TypeHelper/NonmatchingTypeClass</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TypeNameDifferenceResolver</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TypeNameDifferenceResolver/&lt;&gt;c__DisplayClass3_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TypeWrapper</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.TypeWrapper/&lt;&gt;c__DisplayClass36_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.AndFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.CategoryFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.ClassNameFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.CompositeFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.FullNameFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.IdFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.MethodNameFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.NamespaceFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.NotFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.OrFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.PropertyFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.TestNameFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Filters.ValueMatchFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.CompositeWorkItem</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.CompositeWorkItem/OneTimeTearDownWorkItem</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.EventListenerTextWriter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.EventPump</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.Event</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.TestStartedEvent</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.TestFinishedEvent</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.TestOutputEvent</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.EventQueue</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.MainThreadWorkItemDispatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.ParallelWorkItemDispatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.ParallelWorkItemDispatcher/&lt;get_Shifts&gt;d__16</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.ParallelWorkItemDispatcher/&lt;get_Queues&gt;d__18</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.QueuingEventListener</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.SimpleWorkItem</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.SimpleWorkItemDispatcher</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.TestWorker</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.TestWorker/TestWorkerEventHandler</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.TextCapture</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.WorkItem</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.WorkItemBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.WorkItemBuilder/WorkItemOrderComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.WorkItemQueue</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.WorkItemQueue/SavedState</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.ShiftChangeEventHandler</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Execution.WorkShift</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.AfterTestActionCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.AfterTestActionCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.AfterTestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.ApplyChangesToContextCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.ApplyChangesToContextCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.BeforeTestActionCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.BeforeTestActionCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.BeforeTestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.ConstructFixtureCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.DelegatingTestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.DisposeFixtureCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.DisposeFixtureCommand/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.EmptyTestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.MaxTimeCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.MaxTimeCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.OneTimeSetUpCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.OneTimeSetUpCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.OneTimeTearDownCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.OneTimeTearDownCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.SetUpTearDownCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.SetUpTearDownCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.SetUpTearDownItem</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.SkipCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TestActionCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TestActionCommand/&lt;&gt;c__DisplayClass0_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TestActionItem</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TestCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TestMethodCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TheoryResultCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TheoryResultCommand/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TimeoutCommand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TimeoutCommand/&lt;&gt;c__DisplayClass2_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Commands.TimeoutCommand/&lt;&gt;c__DisplayClass2_1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.CombinatorialStrategy</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.DatapointProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.DefaultSuiteBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.DefaultTestCaseBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.NamespaceTreeBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.NUnitTestCaseBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.NUnitTestFixtureBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.PairwiseStrategy</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.PairwiseStrategy/FleaRand</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.PairwiseStrategy/FeatureInfo</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.PairwiseStrategy/FeatureTuple</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.PairwiseStrategy/TestCaseInfo</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.PairwiseStrategy/PairwiseTestCaseGenerator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.ParameterDataProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.ParameterDataProvider/&lt;GetDataFor&gt;d__3</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.ParameterDataSourceProvider</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.ProviderCache</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.ProviderCache/CacheEntry</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Internal.Builders.SequentialStrategy</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.AssertionResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.ResultState</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.TestAttachment</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.TestOutput</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.TNode</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.TNode/NodeFilter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.TNode/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.NodeList</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Interfaces.AttributeDictionary</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AllItemsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AndConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AndConstraint/AndConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AnyOfConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AssignableFromConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AssignableToConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AttributeConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AttributeExistsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.BinaryConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.BinarySerializableConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionContainsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionContainsConstraint/&lt;&gt;c__DisplayClass10_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionEquivalentConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionEquivalentConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionItemsEqualConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionOrderedConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionOrderedConstraint/OrderingStep</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionSubsetConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionSupersetConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionSupersetConstraint/&lt;&gt;c__DisplayClass7_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionTally</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionTally/CollectionTallyResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ComparisonAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ComparisonAdapter/DefaultComparisonAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ComparisonAdapter/ComparerAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ComparisonAdapter/ComparerAdapter`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ComparisonAdapter/ComparisonAdapterForComparison`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ComparisonConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ActualValueDelegate`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Constraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ConstraintBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ConstraintBuilder/OperatorStack</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ConstraintBuilder/ConstraintStack</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ConstraintExpression</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ContainsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DelayedConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DelayedConstraint/WithRawDelayInterval</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DelayedConstraint/WithDimensionedDelayInterval</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DelayedConstraint/WithRawPollingInterval</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DictionaryContainsKeyConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DictionaryContainsKeyConstraint/&lt;&gt;c__DisplayClass10_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DictionaryContainsValueConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.DictionaryContainsValueConstraint/&lt;&gt;c__DisplayClass10_0`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EmptyCollectionConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EmptyConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EmptyDirectoryConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EmptyStringConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EndsWithConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/ComparerAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/EqualityComparerAdapter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/PredicateEqualityAdapter`2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/GenericEqualityAdapter`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/EqualityComparerAdapter`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/ComparerAdapter`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.EqualityAdapter/ComparisonAdapter`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ExactCountConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ExactTypeConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ExceptionNotThrownConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ExceptionTypeConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ExceptionTypeConstraint/ExceptionTypeConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.FalseConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.FileExistsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.FileOrDirectoryExistsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.FloatingPointNumerics</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.GreaterThanConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.GreaterThanOrEqualConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.InstanceOfTypeConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Interval</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ItemsConstraintExpression</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.LessThanConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.LessThanOrEqualConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MessageWriter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ValueFormatter</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ValueFormatterFactory</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_2</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_3</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_4</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_5</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_6</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_7</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_8</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_9</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_10</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_11</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c__DisplayClass14_12</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.MsgUtils/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NaNConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NoItemConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NotConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NullConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Numerics</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NUnitComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NUnitEqualityComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NUnitEqualityComparer/FailurePoint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AllOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AndOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.AttributeOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.BinaryOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.CollectionOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ConstraintOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ExactCountOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NoneOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.NotOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.OrOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PrefixOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PropOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SelfResolvingOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SomeOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.WithOperator</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.OrConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PathConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PredicateConstraint`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PrefixConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PropertyConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.PropertyExistsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.RangeConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.RegexConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ResolvableConstraintExpression</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ReusableConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SameAsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SamePathConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SamePathOrUnderConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SomeItemsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.StartsWithConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.StringConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SubPathConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.SubstringConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsConstraint/ThrowsConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsConstraint/ExceptionInterceptor</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsConstraint/ExceptionInterceptor/&lt;&gt;c__DisplayClass2_0</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsConstraint/GenericInvocationDescriptor`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsConstraint/VoidInvocationDescriptor</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsExceptionConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsExceptionConstraint/ThrowsExceptionConstraintResult</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsExceptionConstraint/&lt;&gt;c__DisplayClass3_0`1</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.ThrowsNothingConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Tolerance</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Tolerance/Range</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.TrueConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.TypeConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.UniqueItemsConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.XmlSerializableConstraint</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.ArraysComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.CharsComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.DateTimeOffsetsComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.DictionariesComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.DictionaryEntriesComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.DirectoriesComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.EnumerablesComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.EquatablesComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.KeyValuePairsComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.NumericsComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.StreamsComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.StringsComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.TimeSpanToleranceComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.TupleComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.TupleComparerBase</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Constraints.Comparers.ValueTupleComparer</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.DefaultTestAssemblyBuilder</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/ActionCallback</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/FrameworkControllerAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/LoadTestsAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/ExploreTestsAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/CountTestsAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/RunTestsAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/RunAsyncAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/StopRunAction</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.FrameworkController/&lt;&gt;c</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>NUnit.Framework.Api.NUnitTestAssemblyRunner</FullName>
+          <Methods />
+        </Class>
+        <Class skippedDueTo="Filter">
+          <FullName>&lt;PrivateImplementationDetails&gt;</FullName>
+          <Methods />
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>

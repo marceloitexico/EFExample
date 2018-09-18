@@ -23,6 +23,7 @@ namespace EFCodeFirstTest.ViewTests.CourseViewTest
         ///This method creates a new teacher in the database (affects persistent data)
         /// </summary>
         [Test]
+       // [Ignore("This is a functional UII testing (not unit testing)")]
         public void ShouldCreateThenDeleteANewCourse()
         {
             //Create Course
@@ -87,6 +88,7 @@ namespace EFCodeFirstTest.ViewTests.CourseViewTest
                 CourseID = 2222
             };
             captureDataIntoCourseForm(editCourseData, true);
+            Utilities.Wait(standardTimeToSeeData);
             var saveBtn = BrowserHost.Driver.FindElement(By.Id("saveBtn"));
             saveBtn.Click();
             Utilities.Wait(standardTimeBetweenPagesMS);

@@ -1,7 +1,7 @@
-"%~dp0packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
+"%~dp0\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
 -register:user ^
--target:"%VS150COMNTOOLS%\..\IDE\mstest.exe" ^
--targetargs:"/testcontainer:\"%~dp0..\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll\" /resultsfile:\"%~dp0EFCodeFirstTest.trx\"" ^
+-target:"%VS150COMNTOOLS%..\IDE\MSTest.exe" ^
+-targetargs:"/testcontainer:\"%~dp0\EFCodeFirstTest\bin\Debug\EFCodeFirstTest.dll\" /resultsfile:\"%~dp0EFCodeFirstTest.trx\"" ^
 -filter:"+[EFApproaches*]* -[EFCodeFirstTest]* -[*]EFApproaches.RouteConfig" ^
 -mergebyhash ^
 -skipautoprops ^

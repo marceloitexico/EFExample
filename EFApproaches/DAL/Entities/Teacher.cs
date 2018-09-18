@@ -19,6 +19,7 @@ namespace EFApproaches.DAL.Entities
         [DisplayName("Title")]
         public string Title { get; set; }
         [DisplayName("Email Address")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string EmailAddress { get; set; }
         [DisplayName("Full Name")]
         public string FullName { get { return FirstMidName + " " + LastName; } }

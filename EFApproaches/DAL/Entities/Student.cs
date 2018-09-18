@@ -22,6 +22,7 @@ namespace EFApproaches.DAL.Entities
         public string FirstMidName { get; set; }
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime EnrollmentDate { get; set; }
+        [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public  string EmailAddress { get; set; }
         public string FullName { get { return FirstMidName + " " + LastName; } }
         public virtual ICollection<Enrollment> Enrollments { get; set; }

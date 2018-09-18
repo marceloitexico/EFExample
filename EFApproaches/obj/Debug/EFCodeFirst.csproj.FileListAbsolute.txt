@@ -142,6 +142,7 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\Microsoft.CodeDom
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\Moq.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\Newtonsoft.Json.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\RazorGenerator.Mvc.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\RazorGenerator.Testing.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\ReflectionMagic.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\System.Net.Http.Formatting.dll
@@ -154,6 +155,7 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\System.Web.Razor.
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\System.Web.WebPages.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\System.Web.WebPages.Razor.dll
+C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\WebActivatorEx.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\WebGrease.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\EntityFramework.xml
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\EntityFramework.SqlServer.xml
@@ -193,6 +195,4 @@ C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csproj.CopyComplete
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.pdb
-C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\RazorGenerator.Mvc.dll
-C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\bin\WebActivatorEx.dll
 C:\Users\Developer\Documents\GitHub\EFExample\EFApproaches\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache

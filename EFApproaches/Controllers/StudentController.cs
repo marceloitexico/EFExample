@@ -59,7 +59,7 @@ namespace EFApproaches.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LastName,FirstMidName,EnrollmentDate")] Student student)
+        public ActionResult Create([Bind(Include = "LastName,FirstMidName,EmailAddress,EnrollmentDate")] Student student)
         {
             try
             {

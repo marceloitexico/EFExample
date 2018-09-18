@@ -10,8 +10,8 @@ namespace EFCodeFirstTest.ViewTests
 {
     public abstract class FunctionalUITestsBase
     {
-        protected internal static int standardTimeBetweenPagesMS = 2000;
-        protected internal static int standardTimeToSeeData = 200;
+        protected internal static int standardTimeBetweenPagesMS = 4000;
+        protected internal static int standardTimeToSeeData = 2000;
 
         protected internal void captureDataIntoControl(string elementID, string data)
         {

@@ -18,14 +18,14 @@ namespace EFApproaches.DAL.Implementations
             {
             new Student{FirstMidName="Carson",LastName="Alexander",  EnrollmentDate=DateTime.Parse("2005-09-01"),EmailAddress="carson@school.com"},
             new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01"),EmailAddress="meredith@school.com"},
-            new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01")},
-            new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Shanelle",LastName="Wolak",EnrollmentDate=DateTime.Parse("2005-09-01")},
-            new Student{FirstMidName="Crystle",LastName="Bale",EnrollmentDate=DateTime.Parse("2005-08-01")},
-            new Student{FirstMidName="Ronnie",LastName="Furey",EnrollmentDate=DateTime.Parse("2005-07-01")}
+            new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01"),EmailAddress="aanand@school.com"},
+            new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01"),EmailAddress="gbarzdukas@school.com"},
+            new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01"),EmailAddress="yli@school.com"},
+            new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01"),EmailAddress="pjustice@school.com"},
+            new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01"),EmailAddress="lnorman@school.com"},
+            new Student{FirstMidName="Shanelle",LastName="Wolak",EnrollmentDate=DateTime.Parse("2005-09-01"),EmailAddress="swolak@school.com"},
+            new Student{FirstMidName="Crystle",LastName="Bale",EnrollmentDate=DateTime.Parse("2005-08-01"),EmailAddress="cbale@school.com"},
+            new Student{FirstMidName="Ronnie",LastName="Furey",EnrollmentDate=DateTime.Parse("2005-07-01"),EmailAddress="rfurey@school.com"}
             };
 
             students.ForEach(s => context.Students.Add(s));

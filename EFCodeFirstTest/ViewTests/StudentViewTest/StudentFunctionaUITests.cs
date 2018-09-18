@@ -22,6 +22,7 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
         ///This method creates a new student in the database (affects persistent data)
         /// </summary>
         [Test]
+        //[Ignore("This is a functional UII testing (not unit testing)")]
         public void ShouldCreateThenDeleteANewStudent()
         {
             //Create Student
@@ -176,6 +177,7 @@ namespace EFCodeFirstTest.ViewTests.StudentViewTest
                 EnrollmentDate = new DateTime(2222, 12, 22)
             };
             captureDataIntoStudentForm(editStudentData);
+            Utilities.Wait(standardTimeToSeeData);
             var saveBtn = BrowserHost.Driver.FindElement(By.Id("saveBtn"));
             saveBtn.Click();
             Utilities.Wait(standardTimeBetweenPagesMS);

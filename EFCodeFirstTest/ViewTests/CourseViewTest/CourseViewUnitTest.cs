@@ -10,14 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EFCodeFirstTest.ViewTests
+namespace EFCodeFirstTest.ViewTests.CourseViewTest
 {
     [TestFixture]
     public class CourseViewUnitTest
     {
         private _Views_Course_Index_cshtml courseIndexView = null;
         private _Views_Course_Details_cshtml courseDetailsView = null;
-        private static int minimumStudentsToStayOpen = 10;
         public _Views_Course_Index_cshtml CourseIndexView
         {
             get
@@ -88,7 +87,17 @@ namespace EFCodeFirstTest.ViewTests
             var notMinimumStudentsMessageRendered = html.GetElementbyId("NotMinimumStudentsMessageContainer");
             Assert.That(notMinimumStudentsMessageRendered, Is.Not.Null);
         }
+
+        [Test]
+        [Ignore("test code coverage")]
+        public void ThereShouldNotStudentsEnrolledIncourse()
+        {
+            Course courseWithoutEnrollments = new Course{ CourseID = 1, Title = "Computers Architechture II", Credits = 8 };
+            courseWithoutEnrollments.Enrollments = new List<Enrollment>();
+            var sut = CourseDetailsView;
+            HtmlDocument html = sut.RenderAsHtml(courseWithoutEnrollments);
+            var noStudentsEnrolledMessageEl = html.DocumentNode.InnerHtml.Contains(": There are no students enrolled in this course");
+            Assert.That(noStudentsEnrolledMessageEl, Is.True);
+        }
     }
 }
-
-   

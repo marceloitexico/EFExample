@@ -22,6 +22,7 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
         ///This method creates a new teacher in the database (affects persistent data)
         /// </summary>
         [Test]
+       // [Ignore("This is a functional UII testing (not unit testing)")]
         public void ShouldCreateThenDeleteANewTeacher()
         {
             //Create Teacher
@@ -156,6 +157,7 @@ namespace EFCodeFirstTest.ViewTests.TeacherViewTest
                 HoursPerWeek = 22
             };
             captureDataIntoTeacherForm(editTeacherData);
+            Utilities.Wait(standardTimeToSeeData);
             var saveBtn = BrowserHost.Driver.FindElement(By.Id("saveBtn"));
             saveBtn.Click();
             Utilities.Wait(standardTimeBetweenPagesMS);
